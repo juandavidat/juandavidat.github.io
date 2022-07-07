@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/cambioContenidos.js"></script>
+    <!-- <link rel="stylesheet" href="../estilosPortafolio.css"> -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Taller #4 - Arreglos</title>
+  </head>
+  <body class="bodyPortafolio">
+    <h1>Taller #4 - Arreglos</h1>
+
+    <div class="wrap">
+      <ul class="tabs">
+        <li><a class="botonPunto" href="#tab1"> Punto 1</a></li>
+        <li><a class="botonPunto" href="#tab2"> Punto 2</a></li>
+        <li><a class="botonPunto" href="#tab3"> Punto 3</a></li>
+        <li><a class="botonPunto" href="#tab4"> Punto 4</a></li>
+        <li><a class="botonPunto" href="#tab5"> Punto 5</a></li>
+      </ul>
+
+      <div class="secciones">
+        <article id="tab1">
+          <h2>Punto 1</h2>
+
+          <p>
+            Crear un vector de tipo Entero con 5 posiciones, llenarlo con
+            información solicitada al usuario. Después de recoger toda la
+            información, se requiere imprimir el índice de cada posición en el
+            arreglo con su valor de la siguiente manera:
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/arreglo1.PNG" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practicaArreglosPunto1
+	
+            Definir indice Como Entero;
+            Definir numeros2digitos como entero;
+            Dimension numeros2digitos[5];
+            
+            Para indice <- 0 Hasta 4 Con Paso 1 Hacer
+              Escribir "Por favor ingrese un número de dos digitos";
+               leer numeros2digitos[indice];
+             FinPara
+             
+            Limpiar Pantalla;
+            Escribir "[0] = ", numeros2digitos[0];
+            Escribir "[1] = ", numeros2digitos[1];
+            Escribir "[2] = ", numeros2digitos[2];
+            Escribir "[3] = ", numeros2digitos[3];
+            Escribir "[4] = ", numeros2digitos[4];
+            
+          FinProceso
+          </pre>
+        </article>
+
+        <article id="tab2">
+          <h2>Punto 2</h2>
+
+          <p>
+            Crear un arreglo de números enteros de 20 posiciones, el cual, debe
+            ser llenado con números aleatorios entre 1 y 100; después de haber
+            llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo
+            diferente al que se usó para llenarse e imprimir los números pares e
+            impares. Ejemplo
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/arreglo2.PNG" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+        Proceso practicaArreglosPunto2
+	
+          Definir indice, pares, impares como entero;
+          Definir numerosN Como Entero;
+          Dimension numerosN[20];
+        
+          para indice <- 0 hasta 19 con paso 1 Hacer
+            
+            numerosN[indice] <- 1+azar(100);
+            
+          FinPara
+          
+          pares <- 0 ;
+          indice <- 0;
+          
+          Escribir "Números pares: " Sin Saltar;
+          
+          Repetir
+            
+            si numerosN(indice) mod 2 = 0 Entonces
+              
+              pares <- numerosN[indice];
+              
+              Escribir sin saltar pares, ", ";
+              
+            FinSi
+            
+            indice <- indice + 1;
+            
+          Hasta Que indice = 20
+          
+          indice <- 0;
+          impares <- 0;
+          
+          Escribir "";
+          Escribir "Números impares: " Sin Saltar;
+          
+          Repetir
+            
+            si numerosN(indice) mod 2 <> 0 Entonces
+              
+              impares <- numerosN[indice];
+              
+              Escribir sin saltar, impares, ", " ;
+              
+            FinSi
+            
+            indice <- indice + 1;
+            
+          Hasta Que indice = 20
+          
+          Escribir "";
+          
+        FinProceso
+        
+        </pre
+          >
+        </article>
+
+        <article id="tab3">
+          <h2>Punto 3</h2>
+
+          <p>
+            Imprimir los números primos del 1 al 1000, el resultado debe ser
+            buscado de forma matemática.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+      Proceso practicaArreglosPunto3
+        Definir c, k, n como entero;
+        
+        Escribir "Números primos: ";
+        
+        para n <- 1 hasta 1000 con paso 1 Hacer
+          k <- 1;
+          c <- 0;
+          
+          mientras k <= n Hacer
+            
+            si n mod k = 0 Entonces
+              
+              c <- c + 1;
+              
+            FinSi
+            k <- k + 1;
+            
+          FinMientras
+          
+          si c = 2 Entonces
+            
+            Escribir n;
+            
+          FinSi
+          
+        FinPara
+        
+      FinProceso
+      
+      </pre
+          >
+        </article>
+
+        <article id="tab4">
+          <h2>Punto 4</h2>
+
+          <p>
+            Dada la siguiente matriz bidimensional, el cual debe de quemar en el
+            código
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/arreglo3-1.PNG" />
+
+          <p>
+            Utilizando el conocimiento adquirido, a excepción de hacerlo de
+            forma manual, imprima la siguiente matriz bidimensional.
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/arreglo3-2.PNG" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+    Proceso practicaArreglosPunto4
+	
+      definir fila, columna  Como Entero;
+      Definir matriz Como Caracter;
+      Dimension matriz[4,5];
+      
+      matriz[0,0] <- "01";
+      matriz[0,1] <- "02";
+      matriz[0,2] <- "03";
+      matriz[0,3] <- "04";
+      matriz[0,4] <- "05";
+      
+      matriz[1,0] <- "06";
+      matriz[1,1] <- "07";
+      matriz[1,2] <- "08";
+      matriz[1,3] <- "09";
+      matriz[1,4] <- "10";
+      
+      matriz[2,0] <- "11";
+      matriz[2,1] <- "12";
+      matriz[2,2] <- "13";
+      matriz[2,3] <- "14";
+      matriz[2,4] <- "15";
+      
+      matriz[3,0] <- "16";
+      matriz[3,1] <- "17";
+      matriz[3,2] <- "18";
+      matriz[3,3] <- "19";
+      matriz[3,4] <- "20";
+      
+      para fila <- 0 Hasta 3 Con Paso 1 Hacer
+        para columna <- 0 Hasta 4 Con Paso 1 Hacer
+          Escribir matriz[fila,columna], " " Sin Saltar;
+        FinPara
+        Escribir "";
+      FinPara
+      
+      Escribir "**************";
+      
+      para fila <- 0 hasta 3 con paso 1 Hacer
+        
+        si fila  mod 2 = 0 Entonces
+          
+          Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+            Escribir matriz[fila,columna], " " Sin Saltar;
+          FinPara
+          
+          Escribir "";
+          
+        SiNo
+          
+          para columna <- 4 Hasta  0 con paso -1 Hacer
+            Escribir  matriz[fila,columna], " " sin saltar;
+          FinPara
+          Escribir "";
+          
+        FinSi
+      
+      FinPara
+      
+    FinProceso
+    
+    </pre
+          >
+        </article>
+
+        <article id="tab5">
+          <h2>Punto 5</h2>
+
+          <p>Se debe de imprimir el siguiente cuadro</p>
+
+          <img class="imagenesTalleres" src="/imagenes/arreglo4.PNG" />
+
+          <p>
+            El usuario deberá insertar la fila y columna de la cual desea ver el
+            resultado, el resultado de cada celda debe estar previamente
+            calculado en una matriz bidimensional la cual cada resultado
+            obedecerá a la fila y columna insertada por el usuario.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+  Proceso practicaArreglosPunto5
+    definir fila, fila2, columna2, columna, espacio, numeroEspacios, resultado, matriz2 Como Entero;
+    Definir matriz, espacioBlanco Como Caracter;
+    Dimension matriz[10,10];
+    Dimension matriz2[10,10];
+    
+    matriz[0,0] <- "1 x 1";
+    matriz[0,1] <- "2 x 1";
+    matriz[0,2] <- "3 x 1";
+    matriz[0,3] <- "4 x 1";
+    matriz[0,4] <- "5 x 1";
+    matriz[0,5] <- "6 x 1";
+    matriz[0,6] <- "7 x 1";
+    matriz[0,7] <- "8 x 1";
+    matriz[0,8] <- "9 x 1";
+    matriz[0,9] <- "10 x 1";
+    
+    matriz[1,0] <- "1 x 2";
+    matriz[1,1] <- "2 x 2";
+    matriz[1,2] <- "3 x 2";
+    matriz[1,3] <- "4 x 2";
+    matriz[1,4] <- "5 x 2";
+    matriz[1,5] <- "6 x 2";
+    matriz[1,6] <- "7 x 2";
+    matriz[1,7] <- "8 x 2";
+    matriz[1,8] <- "9 x 2";
+    matriz[1,9] <- "10 x 2";
+    
+    matriz[2,0] <- "1 x 3";
+    matriz[2,1] <- "2 x 3";
+    matriz[2,2] <- "3 x 3";
+    matriz[2,3] <- "4 x 3";
+    matriz[2,4] <- "5 x 3";
+    matriz[2,5] <- "6 x 3";
+    matriz[2,6] <- "7 x 3";
+    matriz[2,7] <- "8 x 3";
+    matriz[2,8] <- "9 x 3";
+    matriz[2,9] <- "10 x 3";
+    
+    matriz[3,0] <- "1 x 4";
+    matriz[3,1] <- "2 x 4";
+    matriz[3,2] <- "3 x 4";
+    matriz[3,3] <- "4 x 4";
+    matriz[3,4] <- "5 x 4";
+    matriz[3,5] <- "6 x 4";
+    matriz[3,6] <- "7 x 4";
+    matriz[3,7] <- "8 x 4";
+    matriz[3,8] <- "9 x 4";
+    matriz[3,9] <- "10 x 4";
+    
+    matriz[4,0] <- "1 x 5";
+    matriz[4,1] <- "2 x 5";
+    matriz[4,2] <- "3 x 5";
+    matriz[4,3] <- "4 x 5";
+    matriz[4,4] <- "5 x 5";
+    matriz[4,5] <- "6 x 5";
+    matriz[4,6] <- "7 x 5";
+    matriz[4,7] <- "8 x 5";
+    matriz[4,8] <- "9 x 5";
+    matriz[4,9] <- "10 x 5";
+    
+    matriz[5,0] <- "1 x 6";
+    matriz[5,1] <- "2 x 6";
+    matriz[5,2] <- "3 x 6";
+    matriz[5,3] <- "4 x 6";
+    matriz[5,4] <- "5 x 6";
+    matriz[5,5] <- "6 x 6";
+    matriz[5,6] <- "7 x 6";
+    matriz[5,7] <- "8 x 6";
+    matriz[5,8] <- "9 x 6";
+    matriz[5,9] <- "10 x 6";
+    
+    matriz[6,0] <- "1 x 7";
+    matriz[6,1] <- "2 x 7";
+    matriz[6,2] <- "3 x 7";
+    matriz[6,3] <- "4 x 7";
+    matriz[6,4] <- "5 x 7";
+    matriz[6,5] <- "6 x 7";
+    matriz[6,6] <- "7 x 7";
+    matriz[6,7] <- "8 x 7";
+    matriz[6,8] <- "9 x 7";
+    matriz[6,9] <- "10 x 7";
+    
+    matriz[7,0] <- "1 x 8";
+    matriz[7,1] <- "2 x 8";
+    matriz[7,2] <- "3 x 8";
+    matriz[7,3] <- "4 x 8";
+    matriz[7,4] <- "5 x 8";
+    matriz[7,5] <- "6 x 8";
+    matriz[7,6] <- "7 x 8";
+    matriz[7,7] <- "8 x 8";
+    matriz[7,8] <- "9 x 8";
+    matriz[7,9] <- "10 x 8";
+    
+    matriz[8,0] <- "1 x 9";
+    matriz[8,1] <- "2 x 9";
+    matriz[8,2] <- "3 x 9";
+    matriz[8,3] <- "4 x 9";
+    matriz[8,4] <- "5 x 9";
+    matriz[8,5] <- "6 x 9";
+    matriz[8,6] <- "7 x 9";
+    matriz[8,7] <- "8 x 9";
+    matriz[8,8] <- "9 x 9";
+    matriz[8,9] <- "10 x 9";
+    
+    matriz[9,0] <- "1 x 10";
+    matriz[9,1] <- "2 x 10";
+    matriz[9,2] <- "3 x 10";
+    matriz[9,3] <- "4 x 10";
+    matriz[9,4] <- "5 x 10";
+    matriz[9,5] <- "6 x 10";
+    matriz[9,6] <- "7 x 10";
+    matriz[9,7] <- "8 x 10";
+    matriz[9,8] <- "9 x 10";
+    matriz[9,9] <- "10 x 10";
+    
+    Escribir "***********************************************  COLUMNAS  ***********************************************";
+    
+    Para espacio <- 0 Hasta 6 Con Paso 1 Hacer
+      
+      Escribir " " Sin Saltar;
+      
+    FinPara
+    
+    para columna <- 0 Hasta 9 Con Paso 1 Hacer
+      
+      Escribir "      ", columna, "   " Sin Saltar; ;
+      
+    FinPara
+    
+    Escribir  "";
+    Escribir "__________________________________________________________________________________________________________";
+    
+    para fila <- 0 Hasta 8 Con Paso 1 Hacer
+      
+      para fila <- 0 Hasta 8 Con Paso 1 Hacer
+        
+        Para espacio <- 0 Hasta 2 Con Paso 1 Hacer
+          
+          Escribir " " Sin Saltar;
+          
+        FinPara
+        
+        si fila = 0 o fila = 1 o fila = 7 o fila = 8  Entonces
+          Escribir " ";
+        FinSi
+        
+        si fila = 2 Entonces
+          Escribir "F";
+        FinSi
+        
+        si fila = 3 Entonces
+          Escribir "I";
+        FinSi
+        
+        si fila = 4 Entonces
+          Escribir "L";
+        FinSi
+        
+        si fila = 5 Entonces
+          Escribir "A";
+        FinSi
+        
+        si fila = 6 Entonces
+          Escribir "S";
+        FinSi
+        
+        Para espacio <- 0 Hasta 6 Con Paso 1 Hacer
+          
+          Escribir " " Sin Saltar;
+          
+        FinPara
+        
+        Escribir fila, "|  " Sin Saltar;
+        
+        para columna <- 0 Hasta 9 Con Paso 1 Hacer
+          
+          Escribir matriz[fila,columna], "     " Sin Saltar;
+          
+        FinPara
+        
+        Escribir "";
+        
+      FinPara
+        
+    FinPara
+    
+    para fila <- 9 Hasta 9 Con Paso 1 Hacer
+      
+      para fila <- 9 Hasta 9 Con Paso 1 Hacer
+        
+        Para espacio <- 0 Hasta 2 Con Paso 1 Hacer
+          
+          Escribir " " Sin Saltar;
+          
+        FinPara
+        
+        si fila = 9 Entonces
+          Escribir " ";
+        FinSi
+        
+        Para espacio <- 0 Hasta 6 Con Paso 1 Hacer
+          
+          Escribir " " Sin Saltar;
+          
+        FinPara
+        
+        Escribir fila, "|  " Sin Saltar;
+        
+        para columna <- 0 Hasta 9 Con Paso 1 Hacer
+          
+          Escribir matriz[fila,columna], "    " Sin Saltar;
+          
+        FinPara
+        
+        Escribir "";
+        
+      FinPara
+  
+    FinPara
+    
+    Escribir "************************************************************************************************************";
+    
+    para fila2 <- 0 hasta 9 con paso 1 Hacer
+      
+      para columna2 <-0 Hasta 9 con paso 1 Hacer
+        
+        matriz2(fila2,columna2) <- ((fila2 + 1) * (columna2 +1));
+        
+      FinPara
+      
+    FinPara
+    
+    Escribir "Por favor ingrese los datos requeridos para ver el resultado";
+    Escribir "Por favor ingrese el número de la fila";
+    Leer fila2;
+    Escribir "Por favor ingrese el número de la columna";
+    Leer columna2;
+  
+    Escribir matriz2(fila2,columna2);
+  
+  FinProceso
+  
+  </pre
+          >
+        </article>
+
+        <article id="tab6">
+          <h2>Punto 6</h2>
+
+          <p></p>
+
+          <h3>Solución:</h3>
+
+          <pre></pre>
+        </article>
+
+        <article id="tab7">
+          <h2>Punto 7</h2>
+
+          <p></p>
+
+          <h3>Solución:</h3>
+
+          <pre></pre>
+        </article>
+
+        <article id="tab8">
+          <h2>Punto 8</h2>
+
+          <p></p>
+
+          <h3>Solución:</h3>
+
+          <pre></pre>
+        </article>
+      </div>
+
+      <div class="contenedotVideo">
+        <h2>Video de Solución del pumto 4</h2>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/6TLmwKgnz4c"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

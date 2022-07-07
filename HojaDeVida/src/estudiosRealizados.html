@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/HojaDeVida/src/index.js"></script>
+    <script src="/cambioContenidos.js"></script>
+
+    <title>Estudios realizados</title>
+  </head>
+
+  <body onload="tema()">
+    <div class="vistaHvYtalleres">
+      <header class="bg-dark">
+        <ul class="navegacionPrincipal">
+          <li>
+            <button
+              onclick="cambiarContenido('/HojaDeVida/src/hojaDeVida.html')"
+            >
+              Hoja de vida
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="cambiarContenido('/TallerVariables/tallerVariables.html')"
+            >
+              Taller Variables
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="cambiarContenido('/TallerCondicionales/tallerCondicionales.html')"
+            >
+              Taller Condicionales
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="cambiarContenido('/TallerCiclos/tallerCiclos.html')"
+            >
+              Taller Ciclos
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="cambiarContenido('/TallerArreglos/tallerArreglos.html')"
+            >
+              Taller Arreglos
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="cambiarContenido('/TallerFunciones/tallerFunciones.html')"
+            >
+              Taller Funciones
+            </button>
+          </li>
+          <li>
+            <button onclick="cambiarContenido('/TallerJava/tallerJava.html')">
+              Taller Java
+            </button>
+          </li>
+        </ul>
+      </header>
+
+      <div class="contenedorPrincipal bgNegro" id="contenedorPrincipal">
+        <nav>
+          <ul class="navegacion">
+            <li class="menuNav">
+              <a href="/index.html">
+                Información principal
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/experienciaLaboral.html">
+                Experiencia laboral
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/referenciasPersonal.html">
+                Referencias personales
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/referenciasFamiliares.html">
+                Referencias familiares
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/estudiosRealizados.html">
+                Estudios realizados
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <article class="contenido textColor">
+          <div>
+            <button
+              type="button"
+              class="botonCambioFondo bgVerde"
+              onclick="tema('bgVerde'), removerColor('verde')"
+            >
+              Tema 1
+            </button>
+
+            <button
+              type="button"
+              class="botonCambioFondo bgAmarillo"
+              onclick="tema('bgAmarillo'), removerColor('amarillo')"
+            >
+              Tema 2
+            </button>
+
+            <button
+              type="button"
+              class="botonCambioFondo bgMorado"
+              onclick="tema('bgMorado'), removerColor('morado')"
+            >
+              Tema 3
+            </button>
+
+            <button
+              type="button"
+              class="botonCambioFondo bgNegro"
+              onclick="tema('bgNegro'), removerColor('negro')"
+            >
+              Restablecer
+            </button>
+          </div>
+
+          <h1 class="centerText">Estudios realizados</h1>
+
+          <div class="contenido datosPrincipales acordeon">
+            <div
+              class="columna centerText border2 bloque activo"
+              id="desplegarContenido1"
+            >
+              <div class="contenido padding">
+                <h3
+                  class="OcultarMostrar"
+                  onclick="mostrarContenido('mostrar1')"
+                >
+                  Contenido 2
+                </h3>
+              </div>
+
+              <div class="border2">
+                <h2 class="negroColor verdeColor colorTitulo bgTitulo">
+                  Cursos cortos
+                </h2>
+
+                <ul class="centerText contenidoBloque">
+                  <li>
+                    Curso de desarrollo de software con lenguaje Python de 40
+                    horas.
+                  </li>
+                  <li>
+                    Curso de desarrollo de aplicaciones con app inventor de 40
+                    horas.
+                  </li>
+                  <li>Curso mantenimiento de equipos de cómputo 40 horas</li>
+                  <li>Curso seguridad y salud en el trabajo 40 horas</li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="columna border2 centerText bloque activo"
+              id="desplegarContenido2"
+            >
+              <div class="contenido padding">
+                <h3
+                  class="OcultarMostrar"
+                  onclick="mostrarContenido('mostrar2')"
+                >
+                  Contenido 1
+                </h3>
+              </div>
+
+              <div class="border2">
+                <h2
+                  class="negroColor contenido verdeColor colorTitulo bgTitulo"
+                >
+                  Estudios realizados
+                </h2>
+
+                <ul class="centerText contenidoBloque">
+                  <li>Tecnico en programación de software. (Sena)</li>
+                  <li>
+                    Cursos de Javascript ES9, HTML, CSS3, NodeJS, React y
+                    Wordpress. (Udemy)
+                  </li>
+                  <li>
+                    Tecnologia de calidad. (Instituto Tecnológico Metropolitano
+                    (ITM))
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <img class="imagenContenido" src="/imagenes/estudios.png" />
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

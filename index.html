@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+    <link rel="stylesheet" href="/main.css">
+    <script src="/cambioContenidos.js"></script>
+    <title>Talleres</title>
+  </head>
+  <body onload="cambiarContenido('/HojaDeVida/src/hojaDeVida.html')">
+
+    <div class="vistaHvYtalleres">
+    
+    <header class="bg-dark">
+      <ul class="navegacionPrincipal" >
+        <li>
+          <button onclick="cambiarContenido('/HojaDeVida/src/hojaDeVida.html')">
+            Hoja de vida
+          </button>
+        </li>
+        <li>
+          <button onclick="cambiarContenido('/TallerVariables/tallerVariables.html')">
+            Taller Variables
+          </button>
+        </li>        
+        <li>
+          <button onclick="cambiarContenido('/TallerCondicionales/tallerCondicionales.html')">
+            Taller Condicionales
+          </button>
+        </li>
+        <li>
+          <button onclick="cambiarContenido('/TallerCiclos/tallerCiclos.html')">
+            Taller Ciclos
+          </button>
+        </li>
+        <li>
+          <button onclick="cambiarContenido('/TallerArreglos/tallerArreglos.html')">
+            Taller Arreglos
+          </button>
+        </li>
+        <li>
+          <button onclick="cambiarContenido('/TallerFunciones/tallerFunciones.html')">
+            Taller Funciones
+          </button>
+        </li>
+        <li>
+          <button onclick="cambiarContenido('/TallerJava/tallerJava.html')">
+            Taller Java
+          </button>
+        </li>
+      </ul>
+    </header>
+
+    <main class="contenido"></main>
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/cambioContenidos.js"></script>
+    <!-- <link rel="stylesheet" href="../estilosPortafolio.css"> -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Taller #3 - Ciclos</title>
+  </head>
+  <body class="bodyPortafolio">
+    <h1>Taller #3 - Ciclos</h1>
+
+    <div class="wrap">
+      <ul class="tabs">
+        <li><a class="botonPunto" href="#tab1"> Punto 1</a></li>
+        <li><a class="botonPunto" href="#tab2"> Punto 2</a></li>
+        <li><a class="botonPunto" href="#tab3"> Punto 3</a></li>
+        <li><a class="botonPunto" href="#tab4"> Punto 4</a></li>
+        <li><a class="botonPunto" href="#tab5"> Punto 5</a></li>
+        <li><a class="botonPunto" href="#tab6"> Punto 6</a></li>
+        <li><a class="botonPunto" href="#tab7"> Punto 7</a></li>
+        <li><a class="botonPunto" href="#tab8"> Punto 8</a></li>
+      </ul>
+
+      <div class="secciones">
+        <article id="tab1">
+          <h2>Punto 1</h2>
+
+          <p>Realizar la siguiente figura por medio del ciclo Para</p>
+
+          <img class="imagenesTalleres" src="/imagenes/triangulo1Ciclos.png" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practicaCiclosPunto1
+	
+            Definir filas, asteriscos  Como Entero;
+            
+            para filas<-1 Hasta  10 Con Paso 1 Hacer
+              
+              Para asteriscos<-1 hasta filas Con Paso  1 Hacer
+                
+                Escribir Sin Saltar "*";
+                
+              FinPara
+              
+              Escribir "";
+              
+            FinPara
+            
+          FinProceso
+          </pre>
+        </article>
+
+        <article id="tab2">
+          <h2>Punto 2</h2>
+
+          <p>
+            Realizar la siguiente figura por medio del ciclo Mientras - Hacer
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/triangulo2Cilcos.png" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+            Proceso practicaCiclosPunto2
+            definir  filas, espacios, asteriscos  Como Entero;
+            
+            filas<- 10;
+              
+            Mientras filas >= 1  Hacer
+              
+              espacios <- 1;
+              
+              Mientras  espacios <= filas Hacer
+                
+                Escribir " " Sin Saltar;
+                espacios <- espacios + 1;
+                
+              FinMientras
+              
+              asteriscos <- 0;
+              
+              Mientras asteriscos <= (10-filas) Hacer
+                
+                Escribir "*" sin saltar;
+                asteriscos <- asteriscos + 1;
+                
+              FinMientras
+              
+              Escribir "";
+              filas <- filas - 1;
+              
+            FinMientras
+              
+          FinProceso
+          </pre>
+        </article>
+
+        <article id="tab3">
+          <h2>Punto 3</h2>
+
+          <p>
+            Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/árbolCiclos.png" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+            Proceso practicaCiclosPunto3
+	
+	            Definir numeroFilas, fila, numeroEspacios, espacio, centroArbol, inicioTronco,<br>                    anchoTronco, numeroAsteriscos, asterisco  Como Entero;
+	            Definir asteriscoImpreso, espacioBlanco como caracter;
+	
+	            numeroFilas <- 0;
+	            numeroAsteriscos<- 1;
+	            numeroEspacios<-15;
+	
+	            Repetir
+		
+		            numeroFilas<- numeroFilas + 1;
+		            espacioBlanco<- "";
+		            asteriscoImpreso<- "";
+		            espacio<- 0; 
+		            asterisco <- 0;
+		
+		            Repetir
+			            espacio <- espacio + 1;
+			
+			            Escribir espacioBlanco, " " Sin Saltar;
+			
+		            Hasta Que espacio = numeroEspacios
+		
+		            Repetir
+			            asterisco <- asterisco + 1;
+			
+			            Escribir asteriscoImpreso, "*" Sin Saltar;
+			
+		            Hasta Que asterisco = numeroAsteriscos;
+		
+		            Escribir  asteriscoImpreso;
+		            numeroAsteriscos <- numeroAsteriscos + 2;
+		            numeroEspacios <- numeroEspacios - 1;
+		
+	            Hasta Que numeroFilas = 11;
+	
+	            numeroFilas<-0;
+	            centroArbol<- 15;
+	            inicioTronco<- centroArbol - 1;
+	            anchoTronco<-3;
+	
+	            Repetir
+		
+		            numeroFilas<- numeroFilas + 1;
+		            asteriscoImpreso<- "";
+		            espacioBlanco<- "";
+		            espacio<- 0;
+		            asterisco<- 0;
+		
+		            Repetir
+			
+			            espacio<- espacio +1;
+			
+			            Escribir espacioBlanco, " " Sin Saltar;
+			
+		            Hasta Que espacio = inicioTronco;
+		
+		            Repetir
+			
+			            asterisco<- asterisco +1;
+			
+			            Escribir asteriscoImpreso, "*" Sin Saltar;
+			
+		            Hasta Que asterisco = anchoTronco;
+		
+		            Escribir  asteriscoImpreso;
+		
+	            Hasta Que numeroFilas = 1;
+	
+	            Repetir
+		
+		            numeroFilas<- numeroFilas + 1;
+		            asteriscoImpreso<- "";
+		            espacioBlanco<- "";
+		            espacio<- 0;
+		            asterisco<- 0;
+		
+		            Repetir
+			
+			            espacio<- espacio +1;
+			
+			            Escribir espacioBlanco, " " Sin Saltar;
+			
+		            Hasta Que espacio = inicioTronco;
+		
+		            Repetir
+			
+			            asterisco<- asterisco +1;
+			
+			            Escribir asteriscoImpreso, "*" Sin Saltar;
+			
+		            Hasta Que asterisco = anchoTronco;
+		
+		            anchoTronco <- anchoTronco+2;
+		            inicioTronco<- inicioTronco -1;
+		
+		            Escribir  asteriscoImpreso;
+		
+	            Hasta Que numeroFilas = 4;
+            FinProceso
+          </pre>
+        </article>
+
+        <article id="tab4">
+          <h2>Punto 4</h2>
+
+          <p>
+            Se requiere un programa que pueda crear la tabla de multiplicar del
+            número que el usuario indique por medio del ciclo Para; esta debe
+            ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea
+            crear la tabla del 5, entonces el resultado debería ser el
+            siguiente:
+          </p>
+
+          <img
+            class="imagenesTalleres"
+            src="/imagenes/tablaMultiplicarCiclos.png"
+          />
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practricaCiclosPunto4
+            Definir  numeroMultiplicar, multiplicar, resultado  Como Entero;
+            
+            Escribir "Por favor ingrese el número que desea multiplicar";
+            Leer  numeroMultiplicar;
+            
+            Limpiar Pantalla;
+            
+            Para multiplicar<-1  Hasta 10 Con Paso 1 Hacer
+              
+              resultado <- multiplicar * numeroMultiplicar;
+              
+              Escribir multiplicar, " X ", numeroMultiplicar, " = ", resultado;
+              
+            FinPara	
+            
+          FinProceso
+          </pre>
+        </article>
+
+        <article id="tab5">
+          <h2>Punto 5</h2>
+
+          <p>
+            Utilizando el ciclo que usted desee, crear un menú de ejecución
+            infinita hasta que el usuario desee terminar dicho ciclo.
+          </p>
+
+          <img class="imagenesTalleres" src="/imagenes/menúSaludarCiclos.png" />
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practricaCiclosPunto5
+            Definir nombre, saludo Como caracter;
+            Definir  opcion Como entero;
+            Definir nombreCaptura Como Logico;
+            
+            nombreCaptura<- falso;
+            
+            Repetir
+              
+              Escribir "Menú de usuario";
+              Escribir "1. captura nombre";
+              Escribir "2. saludar persona";
+              Escribir "3. salir del sistema";
+              Leer opcion;
+              
+              segun opcion Hacer
+                1:
+                  Escribir "Por favor ingrese su nombre";
+                  leer nombre;
+                  
+                  Limpiar Pantalla;
+                  
+                  Escribir "Hola, ", nombre, ". ¿como estas?";
+                  
+                2: 
+                  si nombreCaptura = Verdadero Entonces
+                    
+                    Escribir " ";
+                    
+                  sino 
+                    
+                    Escribir "Para saludar debes ingresar tu nombre";
+                    
+                  FinSi
+                  
+              FinSegun
+            
+            Hasta Que opcion = 3;
+            
+          FinProceso
+          
+          </pre>
+        </article>
+
+        <article id="tab6">
+          <h2>Punto 6</h2>
+
+          <p>
+            Se está creando una aplicación que va a estar conectada con un
+            prototipo que permita almacenar contactos telefónicos en el
+            dispositivo. Para ello cada contacto debe contener nombre completo,
+            teléfono y organización. Se requiere que la aplicación permita
+            añadir 3 contactos verificando que el número no esté almacenado,
+            buscar contactos almacenados y eliminar contactos si el usuario lo
+            requiere. Recuerde que el sistema debe terminar cuando el usuario
+            así lo indique.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practicaCiclosPunto6
+	
+            Definir nombre,nombreA, nombreB, nombreC, organizacion, organizacionA, organizacionB, organizacionC Como Caracter;
+            Definir telefono, telefonoA, telefonoB, telefonoC, k, opcion, opcion2 Como Entero;
+            Definir continuar, continuar2 Como Logico;
+            
+            nombreA <- "";
+            nombreB <- "";
+            nombreC <- "";
+            telefonoA <- 0;
+            telefonoB <- 0;
+            telefonoC <- 0;
+            continuar <- Verdadero;
+            continuar2 <- Verdadero;
+            
+            
+            Repetir
+              
+              Para  k<-1 Hasta 3 Con Paso 1 Hacer
+                
+                Escribir "Por favor ingrese el número de la opción que desea realizar";
+                Escribir "1. Ingresar contacto";
+                Escribir "2. Buscar contactos";
+                Escribir "3. Eliminar contactos";
+                Escribir "4. Salir del sistema";
+                leer opcion;
+                
+                Segun opcion Hacer
+                  
+                  1: 
+                    Escribir "Por favor ingrese el nombre completo del contacto ", k;
+                    leer nombre;
+                    Escribir "Por favor ingrese el teléfono ", k;
+                    Leer telefono;
+                    Escribir "Por favor ingrese el nombre de la orgacización ", k;
+                    Leer organizacion;
+                    
+                    si k = 1 Entonces
+                      
+                      nombreA <- nombre;
+                      telefonoA <- telefono;
+                      organizacionA <- organizacion;
+                      
+                    FinSi
+                    
+                    si k = 2 Entonces
+                      
+                      nombreB <- nombre;
+                      telefonoB <- telefono;
+                      organizacionB <- organizacion;
+                      
+                      si telefonoB = telefonoA Entonces
+                        
+                        Repetir
+                          
+                          Escribir "El teléfono ya esta ingresado, por favor verifique y vuelva a intentarlo";
+                          Escribir "Por favor ingrese el teléfono ", k;
+                          Leer telefonoB;
+                          
+                        Hasta Que telefonoB <> telefonoA
+                        
+                      FinSi
+                      
+                    FinSi
+                    
+                    si k = 3 Entonces
+                      
+                      nombreC <- nombre;
+                      telefonoC <- telefono;
+                      organizacionC <- organizacion;
+                      
+                      si telefonoC = telefonoA o telefonoC = telefonoB Entonces
+                        
+                        Repetir
+                          
+                          Escribir "El teléfono ya esta ingresado, por favor verifique y vuelva a intentarlo";
+                          Escribir "Por favor ingrese el teléfono ", k;
+                          Leer telefonoC;
+                          
+                        Hasta Que telefonoC <> telefonoA & telefonoC <> telefonoB
+                        
+                      FinSi
+                      
+                    FinSi
+                    
+                    si k = 3 Entonces
+                      
+                      Repetir
+                        
+                        Escribir "Hemos llegado al limite de contactos ingresados";
+                        Escribir "Por favor ingrese el número de la opción que desea realizar";
+                        Escribir "1. Buscar contactos";
+                        Escribir "2. Eliminar contactos";
+                        Escribir "3. Salir del sistema";
+                        leer opcion2;
+                        
+                        Segun opcion2 Hacer
+                          
+                          1:
+                            Escribir "Nombre: ", nombreA;
+                            Escribir "Teléfono: ", telefonoA;
+                            Escribir "Organización: ", organizacionA;
+                            Escribir "**********************************************";
+                            Escribir "Nombre: ", nombreB;
+                            Escribir "Teléfono: ", telefonoB;
+                            Escribir "Organización: ", organizacionB;
+                            Escribir "**********************************************";
+                            Escribir "Nombre: ", nombreC;
+                            Escribir "Teléfono: ", telefonoC;
+                            Escribir "Organización: ", organizacionC;
+                            Escribir "**********************************************";
+                          2:	
+                            nombreA <- "";
+                            nombreB <- "";
+                            nombreC <- "";
+                            telefonoA <- 0;
+                            telefonoB <- 0;
+                            telefonoC <- 0;
+                            organizacionA <- "";
+                            organizacionB <- "";
+                            organizacionC <- "";
+                            
+                            Escribir "Todos los contactos fueron eliminados";
+                            
+                            Escribir "Responda falso o verdadero, ¿Desea continuar en el sistema?";
+                            Leer continuar;
+                            
+                            si continuar = verdadero Entonces
+                              continuar <- Falso;
+                            FinSi
+                            
+                            k <- 0;
+                            
+                          3:
+                            continuar <- Falso;
+                            continuar2 <- Falso;
+                            
+                        FinSegun
+                        
+                        si continuar = falso Entonces
+                          
+                          k <- 4;
+                          continuar2 <- Falso;
+                          
+                        FinSi
+                        
+                      Hasta Que 	continuar = Falso
+                      
+                    FinSi
+                    
+                  2:
+                    si nombreA = "" & nombreB = "" & nombreC = "" Entonces
+                      
+                      Escribir "La agenda no tiene contactos ingresados";
+                      
+                    FinSi
+                    
+                    si nombreA = "" Entonces
+                      
+                      Escribir "";
+                      
+                    SiNo
+                      
+                      Escribir "Nombre: ", nombreA;
+                      Escribir "Teléfono: ", telefonoA;
+                      Escribir "Organización: ", organizacionA;
+                      
+                    FinSi
+                    
+                    si nombreB = "" Entonces
+                      
+                      Escribir "";
+                      
+                    SiNo
+                      
+                      Escribir "Nombre: ", nombreB;
+                      Escribir "Teléfono: ", telefonoB;
+                      Escribir "Organización: ", organizacionB;
+                      
+                    FinSi
+                    
+                    si nombreC = "" Entonces
+                      
+                      Escribir "";
+                      
+                    SiNo
+                      
+                      Escribir "Nombre: ", nombreC;
+                      Escribir "Teléfono: ", telefonoC;
+                      Escribir "Organización: ", organizacionC;
+                      
+                    FinSi
+                    
+                    k <- k -1;
+                    
+                  3:
+                    nombreA <- "";
+                    nombreB <- "";
+                    nombreC <- "";
+                    telefonoA <- 0;
+                    telefonoB <- 0;
+                    telefonoC <- 0;
+                    organizacionA <- "";
+                    organizacionB <- "";
+                    organizacionC <- "";
+                    
+                    Escribir "Todos los contactos fueron eliminados";
+                    
+                    k <- 0;
+                  4:
+                    k <- 4;
+                    continuar2 <- Falso;
+                    
+                FinSegun
+              
+              FinPara
+            
+            Hasta Que continuar2 = Falso
+          
+          FinProceso
+          
+          </pre>
+        </article>
+
+        <article id="tab7">
+          <h2>Punto 7</h2>
+
+          <p>
+            El parqueadero "El guardián" presta sus servicios de parqueadero
+            nocturno para los usuarios del barrio y requiere una aplicación que
+            permita registrar los vehículos que se cuidan en estas
+            instalaciones. Se sugiere que el parqueadero tenga los atributos del
+            vehículo como son, placa y marca, y los datos del cliente como son
+            nombre completo y número de teléfono. Para cada vehículo se debe
+            permitir la opción de ingresar al parqueadero, retirar del
+            parqueadero y consultar si un vehículo se encuentra en el
+            parqueadero. Recuerde que el sistema debe terminar cuando el usuario
+            así lo indique. Tenga en presente que el parqueadero solo puede
+            almacenar máximo 5 vehículos.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practicaCiclosPunto7
+
+            Definir placa, placaA, placaB, placaC, placaD, placaE, marca, marcaA, marcaB, marcaC, marcaD, marcaE, nombre, nombreA, nombreB, nombreC, nombreD, nombreE Como Caracter;
+            Definir telefono,telefonoA, telefonoB, telefonoC,telefonoD, telefonoE, k, opcion, opcion2, vA, vB, vC, vD, vE  Como Entero;
+            Definir continuar Como Logico;
+            
+            vA <- 1;
+            vB <- 2;
+            vC <- 3;
+            vD <- 4;
+            vE <- 5;
+            placaA <- "";
+            placaB <- "";
+            placaC <- "";
+            placaD <- "";
+            placaE <- "";
+            continuar <- Verdadero;
+            
+            Escribir "Bienvenido a parquedero El guardian,";
+            
+            para k<-1 hasta 5 con paso 1 Hacer
+              
+              Escribir "Por favor ingrese el numero de la opcion que desea realizar.";
+              Escribir "1. Ingresar vehiculo al parqueadero.";
+              Escribir "2. Consultar vehiculo.";
+              Escribir "3. Retirar vehiculo del parquedero.";
+              Escribir "4. Salir del sistema.";
+              Leer opcion;
+              
+              Segun opcion hacer
+                1: 
+                  
+                  Escribir Sin Saltar "Por favor ingrese la placa del vehiculo ", k;
+                  leer placa;
+                  Escribir Sin Saltar "Por favor ingrese la marca del vehiculo ", k;
+                  Leer  marca;
+                  Escribir Sin Saltar "Por favor ingrese el nombre completo del dueño del vehiculo ", k;
+                  leer nombre;
+                  Escribir Sin Saltar "Por favor ingrese en número de teléfono de la persona ", k;
+                  Leer telefono;
+                  Limpiar Pantalla;
+                  Escribir "";
+                  Escribir "El vehiculo de placa ", placa, " se a ingresado con exito";
+                  Escribir "";
+                  
+                  
+                  si vA = k Entonces
+                    placaA <- placa;
+                    marcaA <- marca;
+                    nombreA <- nombre;
+                    telefonoA <- telefono;
+                  FinSi
+                  
+                  si vB = k Entonces
+                    placaB <- placa;
+                    marcaB <- marca;
+                    nombreB <- nombre;
+                    telefonoB <- telefono;
+                    
+                    si placaB = placaA Entonces
+                      Repetir
+                        Escribir "El número de placa ya esta ingresado, por favor haga el cambio correspondiente y vuelva a intentarlo";
+                        
+                        escribir Sin Saltar "Por favor ingrese la placa del vehiculo ", k;
+                        leer placaB;
+                        
+                      Hasta Que placaB <> placaA
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si vC = k Entonces
+                    placaC <- placa;
+                    marcaC <- marca;
+                    nombreC <- nombre;
+                    telefonoC <- telefono;
+                    
+                    si placaC = placaB o placaC = placaA Entonces
+                      Repetir
+                        Escribir  "El número de placa ya esta ingresado, por favor haga el cambio correspondiente y vuelva a intentarlo";
+                        
+                        Escribir " por favor ingrese el numero de telefono ", k;
+                        Leer  placaC;
+                        
+                      Hasta Que placaC <> placaA & placaC <> placaB
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si vD = k Entonces
+                    placaD <- placa;
+                    marcaD <- marca;
+                    nombreD <- nombre;
+                    telefonoD <- telefono;
+                    
+                    si placaD = placaA o placaD = placaB o placaD = placaC Entonces
+                      
+                      Repetir
+                        
+                        Escribir  "El número de placa ya esta ingresado, por favor haga el cambio correspondiente y vuelva a intentarlo";
+                        
+                        Escribir " por favor ingrese el numero de telefono ", k;
+                        Leer  placaD;
+                        
+                      Hasta Que placaD <> placaA & placaD <> placaB & placaD <> placaC
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si vE = k Entonces
+                    placaE <- placa;
+                    marcaE <- marca;
+                    nombreE <- nombre;
+                    telefonoE <- telefono;
+                    
+                    si placaE = placaA o placaE = placaB o placaE = placaC o placaE = placaD Entonces
+                      Repetir
+                        Escribir  "El número de placa ya esta ingresado, por favor haga el cambio correspondiente y vuelva a intentarlo";
+                        
+                        Escribir " por favor ingrese el numero de telefono ", k;
+                        Leer  placaE;
+                        
+                      Hasta Que placaE <> placaA & placaE <> placaB & placaE <> placaC & placaE <> placaD
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si k = 5 Entonces
+                    
+                    Escribir "Hemos llegado al limite de cupos del parqueadero";
+                    
+                    Repetir
+                      
+                      Escribir "Por favor ingrese el numero de la opcion que desea realizar.";
+                      Escribir "1. Consultar vehiculo.";
+                      Escribir "2. Retirar vehiculo del parquedero.";
+                      Escribir "3. Salir del sistema.";
+                      Leer opcion2;
+                    
+                      Segun opcion2 Hacer
+                        1:
+                          Escribir "Ingrese la placa del vehiculo";
+                          Leer placa;
+                        
+                          si placa = placaA o placa = placaB o placa = placaC o placa = placaD o placa = placaE Entonces
+                            
+                            si placa = placaA Entonces
+                              
+                              Limpiar Pantalla;
+                              Escribir "El vehiculo:";
+                              Escribir "Placa: ", placaA;
+                              Escribir "Marca: ",marcaA;
+                              Escribir "Dueño: ", nombreA;
+                              Escribir "Telèfono: ", telefonoA;
+                              Escribir "Se encuetra en nuestro parqueadero";
+                              Escribir "";
+                              
+                            FinSi
+                          
+                            si placa = placaB Entonces
+                              
+                              Limpiar Pantalla;
+                              Escribir "El vehiculo:";
+                              Escribir "Placa: ", placaB;
+                              Escribir "Marca: ",marcaB;
+                              Escribir "Dueño: ", nombreB;
+                              Escribir "Telèfono: ", telefonoB;
+                              Escribir "Se encuetra en nuestro parqueadero";
+                              Escribir "";
+                            
+                            FinSi
+                          
+                            si placa = placaC Entonces
+                              
+                              Limpiar Pantalla;
+                              Escribir "El vehiculo:";
+                              Escribir "Placa: ", placaC;
+                              Escribir "Marca: ",marcaC;
+                              Escribir "Dueño: ", nombreC;
+                              Escribir "Telèfono: ", telefonoC;
+                              Escribir "Se encuetra en nuestro parqueadero";
+                              Escribir "";
+                            
+                            FinSi
+                          
+                            si placa = placaD Entonces
+                              
+                              Limpiar Pantalla;
+                              Escribir "El vehiculo:";
+                              Escribir "Placa: ", placaD;
+                              Escribir "Marca: ",marcaD;
+                              Escribir "Dueño: ", nombreD;
+                              Escribir "Telèfono: ", telefonoD;
+                              Escribir "Se encuetra en nuestro parqueadero";
+                              Escribir "";
+                            
+                            FinSi
+                          
+                            si placa = placaE Entonces
+                              
+                              Limpiar Pantalla;
+                              Escribir "El vehiculo:";
+                              Escribir "Placa: ", placaE;
+                              Escribir "Marca: ",marcaE;
+                              Escribir "Dueño: ", nombreE;
+                              Escribir "Telèfono: ", telefonoE;
+                              Escribir "Se encuetra en nuestro parqueadero";
+                              Escribir "";
+                            
+                            FinSi
+                          
+                          SiNo
+                          
+                            Escribir "El vehículo no se que encuentra registrado en el parqueadero, por favor verifique que la información suministrada al sistema sea correcta.";
+                          
+                          FinSi
+                          
+                          Escribir "Responda falso o verdadero,¿Desea continuar en el sistema?";	
+                          Leer continuar;
+                      
+                        2:
+                          Escribir "Ingrese la placa del vehiculo";
+                          Leer placa;
+                        
+                          si placa = placaA o placa = placaB o placa = placaC o placa = placaD o placa = placaE Entonces
+                            
+                            Escribir "Puede pasar a retirar su vehiculo";
+                          
+                          SiNo
+                          
+                            Escribir "El vehículo no se que encuentra registrado en el parqueadero, por favor verifique que la información suministrada al sistema sea correcta.";
+                          
+                          FinSi
+                          
+                          Escribir "Responda falso o verdadero,¿Desea continuar en el sistema?";	
+                          Leer continuar;
+                          
+                        3:
+                          
+                          continuar <- Falso;
+                          
+                      FinSegun
+                      
+                    Hasta Que continuar = Falso
+                    
+                  FinSi
+                  
+                2:
+                  Escribir "Ingrese la placa del vehiculo";
+                  Leer placa;
+                  
+                  si placa = placaA o placa = placaB o placa = placaC o placa = placaD o placa = placaE Entonces
+                    
+                    si placa = placaA Entonces
+                      
+                      Limpiar Pantalla;
+                      Escribir "El vehiculo:";
+                      Escribir "Placa: ", placaA;
+                      Escribir "Marca: ",marcaA;
+                      Escribir "Dueño: ", nombreA;
+                      Escribir "Telèfono: ", telefonoA;
+                      Escribir "Se encuetra en nuestro parqueadero";
+                      Escribir "";
+                      
+                    FinSi
+                    
+                    si placa = placaB Entonces
+                      
+                      Limpiar Pantalla;
+                      Escribir "El vehiculo:";
+                      Escribir "Placa: ", placaB;
+                      Escribir "Marca: ",marcaB;
+                      Escribir "Dueño: ", nombreB;
+                      Escribir "Telèfono: ", telefonoB;
+                      Escribir "Se encuetra en nuestro parqueadero";
+                      Escribir "";
+                  
+                    FinSi
+                  
+                    si placa = placaC Entonces
+                      
+                      Limpiar Pantalla;
+                      Escribir "El vehiculo:";
+                      Escribir "Placa: ", placaC;
+                      Escribir "Marca: ",marcaC;
+                      Escribir "Dueño: ", nombreC;
+                      Escribir "Telèfono: ", telefonoC;
+                      Escribir "Se encuetra en nuestro parqueadero";
+                      Escribir "";
+                
+                    FinSi
+                  
+                    si placa = placaD Entonces
+                      
+                      Limpiar Pantalla;
+                      Escribir "El vehiculo:";
+                      Escribir "Placa: ", placaD;
+                      Escribir "Marca: ",marcaD;
+                      Escribir "Dueño: ", nombreD;
+                      Escribir "Telèfono: ", telefonoD;
+                      Escribir "Se encuetra en nuestro parqueadero";
+                      Escribir "";
+                  
+                    FinSi
+                  
+                    si placa = placaE Entonces
+                      
+                      Limpiar Pantalla;
+                      Escribir "El vehiculo:";
+                      Escribir "Placa: ", placaE;
+                      Escribir "Marca: ",marcaE;
+                      Escribir "Dueño: ", nombreE;
+                      Escribir "Telèfono: ", telefonoE;
+                      Escribir "Se encuetra en nuestro parqueadero";
+                      Escribir "";
+                    
+                    FinSi
+                  
+                  SiNo
+                    
+                    Limpiar Pantalla;
+                    Escribir "El vehículo no se que encuentra registrado en el parqueadero, por favor verifique que la información suministrada al sistema sea correcta.";
+                  
+                  FinSi
+                
+                  k <- k - 1;
+                  
+                3:
+                  Escribir "Ingrese la placa del vehiculo";
+                  Leer placa;
+                  
+                  si placa = placaA o placa = placaB o placa = placaC o placa = placaD o placa = placaE Entonces
+                    
+                    Limpiar Pantalla;
+                    Escribir "Puede pasar a retirar su vehiculo";
+                    
+                  SiNo
+                    
+                    Limpiar Pantalla;
+                    Escribir "El vehículo no se que encuentra registrado en el parqueadero, por favor verifique que la información suministrada al sistema sea correcta.";
+                    
+                  FinSi
+                  
+                  k <- k -1;
+                  
+                4:	
+                  Limpiar Pantalla;
+                  K <- 5;
+                  Escribir "Para confirmar por favor precione ENTER";
+                  
+              FinSegun
+              
+            FinPara
+            
+          FinProceso
+          
+          </pre>
+        </article>
+
+        <article id="tab8">
+          <h2>Punto 8</h2>
+
+          <p>
+            La escuela automovilística "El Maestro" requiere una aplicación que
+            permita registrar a sus clientes en los cursos de enseñanza
+            automovilística y establecer quienes lo han aprobado para continuar
+            con el trámite de adquirir la licencia de conducción. Para cada
+            usuario se debe permitir registrar su ingreso al curso, consultar
+            usuarios que hayan presentado el curso y resultados de la prueba del
+            curso (si fueron aprobados o no). Recuerde que el sistema debe
+            terminar cuando el usuario así lo indique. Tenga presente que la
+            escuela tiene capacidad máxima de gestionar 8 usuarios en su
+            totalidad.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+          Proceso practicaCiclosPunto8
+            Definir nombre, nombreA, nombreB, nombreC, nombreD, nombreE, nombreF, nombreG, nombreH, resultado, resultadoA, resultadoB, resultadoC, resultadoD, resultadoE, resultadoF, resultadoG, resultadoH  Como Caracter;
+            Definir cedula, cedulaA, cedulaB, cedulaC, cedulaD, cedulaE, cedulaF, cedulaG, cedulaH, usuarioA, usuarioB, usuarioC, usuarioD, usuarioE, usuarioF, usuarioG, usuarioH, k, opcion, opcion2 Como Entero;
+            Definir continuar Como Logico;
+            
+            usuarioA <- 1;
+            usuarioB <- 2;
+            usuarioC <- 3;
+            usuarioD <- 4;
+            usuarioE <- 5;
+            usuarioF <- 6;
+            usuarioG <- 7;
+            usuarioH <- 8;
+            cedulaA <- 0;
+            cedulaB <- 0;
+            cedulaC <- 0;
+            cedulaD <- 0;
+            cedulaE <- 0;
+            cedulaF <- 0;
+            cedulaG <- 0;
+            cedulaH <- 0;
+            nombreA <- "";
+            nombreB <- "";
+            nombreC <- "";
+            nombreD <- "";
+            nombreE <- "";
+            nombreF <- "";
+            nombreG <- "";
+            nombreH <- "";
+            resultadoA <- "";
+            resultadoB <- "";
+            resultadoC <- "";
+            resultadoD <- "";
+            resultadoE <- "";
+            resultadoF <- "";
+            resultadoG <- "";
+            resultadoH <- "";
+            continuar <- Verdadero;
+            
+            Escribir "Bienvenido a la escuela automovilistica El maestro";
+            
+            Para k<-1 Hasta 8 Con Paso 1 Hacer
+              
+              Escribir "Por favor ingrese el número de opción que desea realizar";
+              Escribir "1. Registrar ingreso";
+              Escribir "2. Consultar estado de usuario";
+              Escribir "3. Salir del sistema";
+              leer opcion;
+              
+              segun opcion hacer
+                1:
+                  Escribir "Por favor ingrese el nombre de la persona ", k;
+                  leer nombre;
+                  Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                  Leer cedula;
+                  Escribir "";
+                  Escribir "El usuario ", nombre, " se a registrado con exito.";
+                  Escribir "Puede pasar a realizar la prueba del curso";
+                  Escribir "Por favor ingrese los resultados del curso";
+                  Escribir "Responda si o no, ¿El usuario supero el curso?";
+                  Leer  resultado;
+                  
+                  si usuarioA = K Entonces
+                    
+                    nombreA <- nombre;
+                    cedulaA <- cedula;
+                    resultadoA <- resultado;
+                    
+                  FinSi
+                  
+                  si usuarioB = K Entonces
+                    
+                    nombreB <- nombre;
+                    cedulaB <- cedula;
+                    resultadoB <- resultado;
+                    
+                    si cedulaB = cedulaA Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona", k;
+                        Leer cedulaB;
+                        
+                      Hasta Que cedulaB <> cedulaA
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si usuarioC = K Entonces
+                    
+                    nombreC <- nombre;
+                    cedulaC <- cedula;
+                    resultadoC <- resultado;
+                    
+                    si cedulaC = cedulaA o cedulaC = cedulaB Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                        Leer cedulaC;
+                        
+                      Hasta Que cedulaC <> cedulaA & cedulaC <> cedulaB
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si usuarioD = K Entonces
+                    
+                    nombreD <- nombre;
+                    cedulaD <- cedula;
+                    resultadoD <- resultado;
+                    
+                    si cedulaD = cedulaA o cedulaD = cedulaB o cedulaD = cedulaC Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                        Leer cedulaD;
+                        
+                      Hasta Que cedulaD <> cedulaA & cedulaD <> cedulaB & cedulaD <> cedulaC
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si usuarioE = K Entonces
+                    
+                    nombreE <- nombre;
+                    cedulaE <- cedula;
+                    resultadoE <- resultado;
+                    
+                    si cedulaE = cedulaA o cedulaE = cedulaB o cedulaE = cedulaC o cedulaE = cedulaD Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                        Leer cedulaE;
+                        
+                      Hasta Que cedulaE <> cedulaA & cedulaE <> cedulaB & cedulaE <> cedulaC & cedulaE <> cedulaD
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si usuarioF = K Entonces
+                    
+                    nombreF <- nombre;
+                    cedulaF <- cedula;
+                    resultadoF <- resultado;
+                    
+                    si cedulaF = cedulaA o cedulaF = cedulaB o cedulaF = cedulaC o cedulaF = cedulaD o cedulaF = cedulaE  Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                        Leer cedulaF;
+                        
+                      Hasta Que cedulaF <> cedulaA & cedulaF <> cedulaB & cedulaF <> cedulaC & cedulaF <> cedulaD & cedulaF <> cedulaE
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si usuarioG = K Entonces
+                    
+                    nombreG <- nombre;
+                    cedulaG <- cedula;
+                    resultadoG <- resultado;
+                    
+                    si cedulaG = cedulaA o cedulaG = cedulaB o cedulaG = cedulaC o cedulaG = cedulaD o cedulaG = cedulaE o cedulaG = cedulaF  Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                        Leer cedulaG;
+                        
+                      Hasta Que cedulaG <> cedulaA & cedulaG <> cedulaB & cedulaG <> cedulaC & cedulaG <> cedulaD & cedulaG <> cedulaE & cedulaG <> cedulaF
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si usuarioH = K Entonces
+                    
+                    nombreH <- nombre;
+                    cedulaH <- cedula;
+                    resultadoH <- resultado;
+                    
+                    si cedulaH = cedulaA o cedulaH = cedulaB o cedulaH = cedulaC o cedulaH = cedulaD o cedulaH = cedulaE o cedulaH = cedulaF o cedulaH = cedulaG  Entonces
+                      
+                      Repetir
+                        
+                        Escribir "La cedula ya se encuentra registrada, por favor verifique y vuelva a intentarlo";
+                        Escribir "Por favor ingrese el número de cedula de la persona ", k;
+                        Leer cedulaH;
+                        
+                      Hasta Que cedulaH <> cedulaA & cedulaH <> cedulaB & cedulaH <> cedulaC & cedulaH <> cedulaD & cedulaH <> cedulaE & cedulaH <> cedulaF & cedulaH <> cedulaG
+                      
+                    FinSi
+                    
+                  FinSi
+                  
+                  si k = 8 Entonces
+                    
+                    Escribir "Hemos llegado al limite de cupos para el curso.";
+                    
+                    Repetir
+                      
+                      Escribir "Por favor ingrese el número de opción que desea realizar";
+                      Escribir "1. Consultar estado de usuario";
+                      Escribir "2. Salir del sistema";
+                      leer opcion2;
+                      
+                      segun opcion2 Hacer
+                        
+                        1:
+                          si nombreA <> "" Entonces
+                            
+                            Escribir "Usuario: ", usuarioA;
+                            Escribir "Nombre: ", nombreA;
+                            Escribir "Cedula: ", cedulaA;
+                            Escribir "¿El usuario supero la prueba? ", resultadoA;
+                            
+                            si resultadoA = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            Escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreB <> "" Entonces
+                            
+                            Escribir "Usuario: ", usuarioB;
+                            Escribir "Nombre: ", nombreB;
+                            Escribir "Cedula: ", cedulaB;
+                            Escribir "¿El usuario supero la prueba? ",resultadoB;
+                            
+                            si resultadoB = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreC <> "" Entonces
+                            
+                            Escribir "Usuario: ", usuarioC;
+                            Escribir  "Nombre: ", nombreC;
+                            Escribir "Cedula: ", cedulaC;
+                            Escribir "¿El usuario supero la prueba? ",resultadoC;
+                            
+                            si resultadoC = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreD <> "" Entonces
+                            
+                            Escribir "Usuario: ", usuarioD;
+                            Escribir "Nombre: ", nombreD;
+                            Escribir "Cedula: ", cedulaD;
+                            Escribir "¿El usuario supero la prueba? ",resultadoD;
+                            
+                            si resultadoD = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreE <> "" Entonces
+                            Escribir "Usuario: ", usuarioE;
+                            Escribir "Nombre: ", nombreE;
+                            Escribir "Cedula: ", cedulaE;
+                            Escribir "¿El usuario supero la prueba? ",resultadoE;
+                            
+                            si resultadoE = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreF <> "" Entonces
+                            
+                            Escribir "Usuario: ", usuarioF;
+                            Escribir "Nombre: ", nombreF;
+                            Escribir "Cedula: ", cedulaF;
+                            Escribir "¿El usuario supero la prueba? ",resultadoF;
+                            
+                            si resultadoF = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreG <> "" Entonces
+                            
+                            Escribir "Usuario: ", usuarioG;
+                            Escribir "Nombre: ", nombreG;
+                            Escribir "Cedula: ", cedulaG;
+                            Escribir "¿El usuario supero la prueba? ",resultadoG;
+                            
+                            si resultadoG = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          si nombreH <> "" Entonces
+                            
+                            Escribir "Usuario", usuarioH;
+                            Escribir "Nombre: ", nombreH;
+                            Escribir "Cedula: ", cedulaH;
+                            Escribir "¿El usuario supero la prueba? ",resultadoH;
+                            
+                            si resultadoH = "si" Entonces
+                              
+                              Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                              
+                            SiNo
+                              
+                              Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                              
+                            FinSi
+                            
+                            escribir "*****************************************************************************************";
+                            
+                          FinSi
+                          
+                          Escribir "Responda falso o verdadero,¿Desea continuar en el sistema?";	
+                          Leer continuar;
+                          
+                        2:
+                          continuar <- Falso;
+                      
+                      FinSegun
+                    
+                    Hasta Que continuar = Falso
+                    
+                  FinSi
+                
+                2:
+                  si nombreA <> "" Entonces
+            
+                    Escribir "Usuario: ", usuarioA;
+                    Escribir "Nombre: ", nombreA;
+                    Escribir "Cedula: ", cedulaA;
+                    Escribir "¿El usuario supero la prueba? ", resultadoA;
+                    
+                    si resultadoA = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    Escribir "*****************************************************************************************";
+                  
+                  FinSi
+                  
+                  si nombreB <> "" Entonces
+                    
+                    Escribir "Usuario: ", usuarioB;
+                    Escribir "Nombre: ", nombreB;
+                    Escribir "Cedula: ", cedulaB;
+                    Escribir "¿El usuario supero la prueba? ",resultadoB;
+                    
+                    si resultadoB = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  si nombreC <> "" Entonces
+                    
+                    Escribir "Usuario: ", usuarioC;
+                    Escribir  "Nombre: ", nombreC;
+                    Escribir "Cedula: ", cedulaC;
+                    Escribir "¿El usuario supero la prueba? ",resultadoC;
+                    
+                    si resultadoC = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  si nombreD <> "" Entonces
+                    
+                    Escribir "Usuario: ", usuarioD;
+                    Escribir "Nombre: ", nombreD;
+                    Escribir "Cedula: ", cedulaD;
+                    Escribir "¿El usuario supero la prueba? ",resultadoD;
+                    
+                    si resultadoD = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  si nombreE <> "" Entonces
+                    Escribir "Usuario: ", usuarioE;
+                    Escribir "Nombre: ", nombreE;
+                    Escribir "Cedula: ", cedulaE;
+                    Escribir "¿El usuario supero la prueba? ",resultadoE;
+                    
+                    si resultadoE = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  si nombreF <> "" Entonces
+                    
+                    Escribir "Usuario: ", usuarioF;
+                    Escribir "Nombre: ", nombreF;
+                    Escribir "Cedula: ", cedulaF;
+                    Escribir "¿El usuario supero la prueba? ",resultadoF;
+                    
+                    si resultadoF = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  si nombreG <> "" Entonces
+                    
+                    Escribir "Usuario: ", usuarioG;
+                    Escribir "Nombre: ", nombreG;
+                    Escribir "Cedula: ", cedulaG;
+                    Escribir "¿El usuario supero la prueba? ",resultadoG;
+                    
+                    si resultadoG = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  si nombreH <> "" Entonces
+                    
+                    Escribir "Usuario", usuarioH;
+                    Escribir "Nombre: ", nombreH;
+                    Escribir "Cedula: ", cedulaH;
+                    Escribir "¿El usuario supero la prueba? ",resultadoH;
+                    
+                    si resultadoH = "si" Entonces
+                      
+                      Escribir "El usuario puede continuar con el proceso para adquirir la licencia de conducción.";
+                      
+                    SiNo
+                      
+                      Escribir "El usuario no puede continuar en el proceso para adquirir la licencia de conducción.";
+                      
+                    FinSi
+                    
+                    escribir "*****************************************************************************************";
+                    
+                  FinSi
+                  
+                  k <- k - 1;
+                
+                3:
+                  Limpiar Pantalla;
+                  Escribir "Para salir presione Enter";
+                  k <- 8;
+                  
+              FinSegun
+              
+            FinPara
+            
+          FinProceso
+          
+          </pre>
+        </article>
+      </div>
+
+      <div class="contenedotVideo">
+        <h2>Video de Solución del pumto 6 al 8</h2>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/QsS9-Mm2LYg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

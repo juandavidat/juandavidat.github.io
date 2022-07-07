@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="/cambioContenidos.js"></script>
+  <!-- <link rel="stylesheet" href="../estilosPortafolio.css"> -->
+  <link rel="stylesheet" href="main.css">
+  <title>Taller #1 - Variables e impresión</title>
+</head>
+<body class="bodyPortafolio">
+
+  <h1>Taller #1 - Variables e impresión</h1>
+
+  <div class="wrap">
+  <ul class="tabs">
+    <li><a class="botonPunto"  href="#tab1"> Punto 1</a></li>
+    <li><a class="botonPunto"  href="#tab2"> Punto 2</a></li>
+    <li><a class="botonPunto"  href="#tab3"> Punto 3</a></li>
+    <li><a class="botonPunto"  href="#tab4"> Punto 4</a></li>
+    <li><a class="botonPunto"  href="#tab5"> Punto 5</a></li>
+    
+  </ul>
+
+  <div class="secciones">
+    <article id="tab1">
+        <h2>Punto 1</h2>
+
+        <p>
+          Realizar un programa el cual solicite su nombre y apellidos.
+        </p>
+
+        <h3>Solución:</h3>
+
+        <pre>
+          Proceso practicaVariablesPunto1
+
+	          Definir nombre, apellido1, apellido2 Como Caracter;
+	
+	          Escribir "Por favor ingrese su nombre";
+	          Leer  nombre;
+	
+	          Escribir "Por favor ingrese su primer apellido";
+	          Leer  apellido1;
+	
+	          Escribir "Por favor ingrese su segundo apellido";
+	          Leer  apellido2;
+
+          FinProceso
+        </pre>
+    </article>
+    <article id="tab2">
+      <h2>Punto 2</h2>
+
+      <p>
+        Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.
+      </p>
+
+      <h3>Solución:</h3>
+      <pre>
+        Proceso practicaVariablesPunto2
+	         Definir nombre, apellido1, apellido2 Como Caracter;
+	         Definir edad Como Entero;
+	         Definir estatura Como Real;
+	
+	         Escribir "Por favor ingrese su nombre";
+	         Leer  nombre;
+	
+	         Escribir "Por favor ingrese su primer apellido";
+	         Leer  apellido1;
+	
+	         Escribir "Por favor ingrese su segundo apellido";
+	         Leer  apellido2;
+	
+	         Escribir "Por favor ingrese su edad";
+	         Leer  edad;
+	
+         	         Escribir "Por favor ingrese su estatura";
+	         Leer  estatura;
+
+        FinProceso
+      </pre>
+  </article>
+  <article id="tab3">
+    <h2>Punto 3</h2>
+
+    <p>
+      Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo "Nombre Completo", soy hijo de "Nombre de la Madre" y "Nombre del Padre".
+    </p>
+
+    <h3>Solución:</h3>
+
+    <pre>
+      Proceso practicaVariablesPunto3
+	      Definir nombre, apellido1, apellido2, nombrePadre,       apellido1Padre, apellido2Padre, nombreMadre, apellido1Madre,       apellido2Madre Como Caracter;
+	
+	
+	      Escribir "Por favor ingrese su nombre";
+	      Leer  nombre;
+	
+	      Escribir "Por favor ingrese su primer apellido";
+	      Leer  apellido1;
+	
+	      Escribir "Por favor ingrese su segundo apellido";
+	      Leer  apellido2;
+	
+	      Escribir "Por favor ingrese el nombre de su padre";
+	      Leer  nombrePadre;
+	
+	      Escribir "Por favor ingrese el primer apellido de su padre";
+	      Leer  apellido1Padre;
+	
+	      Escribir "Por favor ingrese el segundo apellido de su padre";
+	      Leer  apellido2Padre;
+	
+	      Escribir "Por favor ingrese el nombre de su madre";
+	      Leer  nombreMadre;
+	
+	      Escribir "Por favor ingrese el primer apellido de su madre";
+	      Leer  apellido1Madre;
+	
+	      Escribir "Por favor ingrese el segundo apellido de su madre";
+	      Leer  apellido2Madre;
+	
+	      Limpiar Pantalla;
+	
+        Escribir  "Yo ", nombre, " ", apellido1, " ", apellido2, ",   soy       hijo de ", nombreMadre, " y ", nombrePadre, "." ;
+		
+      FinProceso
+    </pre>
+</article>
+<article id="tab4">
+  <h2>Punto 4</h2>
+  
+  <p>
+    Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad "Nombre de la Ciudad", es la capital del país "Nombre del País"
+  </p>
+
+  <h3>Solución:</h3>
+
+  <pre>
+  Proceso practicaVariablesPunto4
+    Definir ciudad, pais Como Caracter;
+  
+    Escribir "Por favor ingrese el nombre de una ciudad capital";
+    Leer  ciudad;
+    
+    Escribir "Por favor ingrese el nombre del país";
+    Leer  pais;
+    
+    Limpiar Pantalla;
+    
+    Escribir  "La ciudad ", ciudad, ", es la capital del país ", pais ; 
+    
+  FinProceso
+  </pre>
+</article>
+
+<article id="tab5">
+  <h2>Punto 5</h2>
+
+  <p>
+    Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: "Nombre de Mascota" es un"a" "Tipo de Mascota", el cual, tiene "Edad de la Mascota" años de edad y "Nombre Completo" es actualmente su dueño"a".
+  </p>
+
+  <h3>Solución:</h3>
+
+  
+  <pre>
+  Proceso practicaVariablesPunto5
+    Definir nombreMascota, tipoMascota, nombreDueno, apellidos Como Caracter;
+    Definir edadMascota Como Entero;
+    
+    
+    Escribir "Por favor ingrese el nombre de su mascota";
+    Leer  nombreMascota;
+    
+    Escribir "Por favor ingrese la edad de su mascota";
+    Leer  edadMascota;
+    
+    Escribir "Por favor ingrese el tipo de mascota";
+    Leer  tipoMascota;
+    
+    Escribir "Por favor ingrese su nombre";
+    Leer  nombreDueno;
+    
+    Escribir "Por favor ingrese sus apellidos";
+    Leer  apellidos;
+    
+    Limpiar Pantalla;
+    
+    Escribir nombreMascota, " es un(a) ", tipoMascota, ", el cual, tiene ", edadMascota, " años de edad y ", nombreDueno, " ", apellidos, " es actualmente su dueño(a).";
+    
+    
+  FinProceso
+  </pre>
+
+</article
+
+</div>
+
+<div class="contenedotVideo">
+
+  <h2>Video de Solución para todos los puntos</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b4STm7Dqmd0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+</div>
+</body>
+</html>

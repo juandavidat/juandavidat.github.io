@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/cambioContenidos.js"></script>
+    <!-- <link rel="stylesheet" href="../estilosPortafolio.css"> -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Taller #2 - Condicionales</title>
+  </head>
+  <body class="bodyPortafolio">
+    <h1>Taller #2 - Condicionales</h1>
+
+    <div class="wrap">
+      <ul class="tabs">
+        <li><a class="botonPunto" href="#tab1"> Punto 1</a></li>
+        <li><a class="botonPunto" href="#tab2"> Punto 2</a></li>
+        <li><a class="botonPunto" href="#tab3"> Punto 3</a></li>
+        <li><a class="botonPunto" href="#tab4"> Punto 4</a></li>
+        <li><a class="botonPunto" href="#tab5"> Punto 5</a></li>
+        <li><a class="botonPunto" href="#tab6"> Punto 6</a></li>
+        <li><a class="botonPunto" href="#tab7"> Punto 7</a></li>
+        <li><a class="botonPunto" href="#tab8"> Punto 8</a></li>
+        <li><a class="botonPunto" href="#tab9"> Punto 9</a></li>
+        <li><a class="botonPunto" href="#tab10"> Punto 10</a></li>
+      </ul>
+
+      <div class="secciones">
+        <article id="tab1">
+          <h2>Punto 1</h2>
+
+          <p>
+            Realizar un programa en el cual se solicite la edad de una persona.
+            Si la persona es mayor o igual a 18 años, deberá mostrar en
+            pantalla: Usted es mayor de edad.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+            Proceso practicaCodicionalesPunto1
+	
+	            Definir edad Como Entero;
+	
+	            Escribir "Por favor ingrese su edad";
+	            Leer  edad;
+	
+	            Si edad >= 18 Entonces
+		            Escribir "Usted es mayor de edad";
+	            FinSi
+	
+            FinProceso            
+          </pre>
+        </article>
+        <article id="tab2">
+          <h2>Punto 2</h2>
+
+          <p>
+            Realizar un programa en el cual se solicite la edad de una persona.
+            Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted
+            aún es un niño(a).
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+            
+            Proceso practicaCodicionalesPunto2
+    
+              Definir edad Como Entero;
+    
+              Escribir "Por favor ingrese su edad.";
+              Leer  edad;
+    
+              Si (edad < 18) Entonces
+                Escribir "Usted es una niñ(a).";
+              FinSi
+    
+            FinProceso
+           
+          </pre>
+        </article>
+        <article id="tab3">
+          <h2>Punto 3</h2>
+
+          <p>
+            Realizar un programa en el cual se solicite el nombre, apellidos y
+            edad de la persona. Si la persona es mayor o igual a 18 años,
+            entonce se deberá imprimir en pantalla [Nombre completo] usted es
+            mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de
+            la persona es menor que 18 años, entonces, deberá imprimirse el
+            siguiente mensaje: [Nombre completo] usted es menor de edad, por lo
+            tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+        Proceso practicaCodicionalesPunto3
+	
+	        Definir nombre, apellidos Como Caracter;
+	        Definir edad Como Entero;
+	
+	        Escribir "Por favor ingrese su nombre.";
+	        Leer  nombre;
+	
+	        Escribir "Por favor ingrese sus apellidos.";
+	        Leer  apellidos;
+	
+	        Escribir "Por favor ingrese su edad.";
+	        Leer  edad;
+	
+	        Si edad >= 18 Entonces
+		
+		        Limpiar Pantalla;
+		
+		        Escribir nombre, " ", apellidos, " Usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+		
+	        SiNo
+		        Limpiar Pantalla;
+		
+		        Escribir nombre, " ", apellidos, " Usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor  devuélvase a su casa. ";
+	        FinSi
+	
+        FinProceso
+      </pre
+          >
+        </article>
+        <article id="tab4">
+          <h2>Punto 4</h2>
+
+          <p>
+            La video tienda que presta sus servicios de alquiler de películas a
+            los usuarios del barrio el Porvenir, requiere de una aplicación que
+            permita registrar el alquiler de las películas que adquieren sus
+            usuarios. Para cada usuario se debe permitir la opción de alquilar
+            película, consultar películas disponibles y recibir película en la
+            video tienda con la opción de realizar anotaciones sobre estas si se
+            llegan a presentar daños u otra novedad sobre la película.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+      Proceso practicaCodicionalesPunto4
+	
+      Definir anotaciones Como Caracter;
+      Definir peliculasDisponibles Como entero;
+      Definir alquilerPeliculas, llevarDefectuosa Como logico;
+      
+      Escribir "Hola, bienvenido a su video tienda favorita.";
+      Escribir "Peliculas disponibles.";
+      Escribir  "Por favor elija el número de la pelicula que desea alquilar.";
+      Escribir "1. Spiderman";
+      Escribir "2. Iron man";
+      Escribir "3. Deadpool";
+      Leer peliculasDisponibles;
+      
+      Segun peliculasDisponibles Hacer
+        1:
+          Escribir "Elejiste Spiderman.";
+          Escribir "Puedes acercarte a la video tienda por ella.";
+          Escribir "Responda falso o verdadero, ¿la pelicula presenta alguna novedad?";
+          Leer alquilerPeliculas;
+          
+          si alquilerPeliculas = Verdadero Entonces
+            Escribir "Por favor ingrese las novedades que presenta la pelicula.";
+            Leer anotaciones;
+            Escribir "Responda falso o verdadero, ¿desea llevarla de todos modos.?";
+            Leer llevarDefectuosa;
+            si llevarDefectuosa = Verdadero Entonces
+              Escribir "Disfrute su pelicula.";
+            SiNo
+              Escribir "lamentamos los inconvenientes, esperamos poder servirle la proxima";
+            FinSi
+            
+          SiNo
+            Escribir "Disfrute su pelicula.";
+          FinSi
+          
+        2:
+          Escribir "Elejiste Iron man";
+          Escribir "Puedes acercarte a la video tienda por ella.";
+          Escribir "Responda falso o verdadero, ¿la pelicula presenta alguna novedad?";
+          Leer alquilerPeliculas;
+          
+          si alquilerPeliculas = Verdadero Entonces
+            Escribir "Por favor ingrese las novedades que presenta la pelicula.";
+            Leer anotaciones;
+            Escribir "Responda falso o verdadero, ¿desea llevarla de todos modos.?";
+            Leer llevarDefectuosa;
+            si llevarDefectuosa = Verdadero Entonces
+              Escribir "Disfrute su pelicula.";
+            SiNo
+              Escribir "lamentamos los inconvenientes, esperamos poder servirle la proxima";
+            FinSi
+            
+          SiNo
+            Escribir "Disfrute su pelicula.";
+          FinSi
+          
+        3: 
+          Escribir "Elejiste Deadpool";
+          Escribir "Puedes acercarte a la video tienda por ella.";
+          Escribir "Responda falso o verdadero, ¿la pelicula presenta alguna novedad?";
+          Leer alquilerPeliculas;
+          
+          si alquilerPeliculas = Verdadero Entonces
+            Escribir "Por favor ingrese las novedades que presenta la pelicula.";
+            Leer anotaciones;
+            Escribir "Responda falso o verdadero, ¿desea llevarla de todos modos.?";
+            Leer llevarDefectuosa;
+            si llevarDefectuosa = Verdadero Entonces
+              Escribir "Disfrute su pelicula.";
+            SiNo
+              Escribir "lamentamos los inconvenientes, esperamos poder servirle la proxima";
+            FinSi
+            
+          SiNo
+            Escribir "Disfrute su pelicula.";
+          FinSi
+          
+      FinSegun
+        
+      
+    FinProceso
+    </pre
+          >
+        </article>
+
+        <article id="tab5">
+          <h2>Punto 5</h2>
+
+          <p>
+            La Droguería Mi Salud presta sus servicios en la localidad de Suba y
+            requiere una aplicación para poder facturar los productos que vende
+            a sus clientes y para ello, los productos tienen unas
+            características que deben indicársele al cliente para que pueda
+            escoger el producto a comprar. Para cada cliente, se tienen las
+            opciones de compra de producto, consulta de precios por producto y
+            devoluciones en caso de que se presenten.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+    Proceso practicaCondicionalesPunto5
+	
+      Definir devolucion Como Caracter;
+      Definir servicio, productoSeleccionado, procedencia, valorAcetaminofen, valorDiclofenalco, valorAspirina, recargoUsa, valorPagar, recargoAleman Como Entero;
+      Definir comprar Como Logico;
+      
+      valorAcetaminofen <- 2000;
+      valorDiclofenalco <- 4000;
+      valorAspirina <- 3000;
+      
+      Escribir "Hola, bienvenido a la drogueria Mi Salud";
+      Escribir "Por favor selecciona el proceso que deseas realizar";
+      Escribir "1. comprar y consultar productos";
+      Escribir "2. Devolución de producto";
+      Leer  servicio;
+      
+      Escribir "Por favor elegir número del producto con el cual quiere hacer el proceso";
+      Escribir "1. Acetaminofen";
+      Escribir "2. Diclofenalco";
+      Escribir "3. Aspirina";
+      Leer productoSeleccionado;
+      
+      Escribir "Por favor elegir el número de la nacionalidad del producto";
+      Escribir "1. nacional";
+      Escribir "2. Estadounidense";
+      Escribir "3. Aleman";
+      Leer  procedencia;
+      
+      segun servicio Hacer
+        1: 
+          si productoSeleccionado = 1 & procedencia = 1 Entonces
+            
+            Escribir "El producto es nacional y tiene un valor de: ", valorAcetaminofen;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorAcetaminofen, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorAcetaminofen;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 1 & procedencia = 2 Entonces
+            
+            recargoUsa <- valorAcetaminofen * 0.5;
+            valorPagar <- valorAcetaminofen + recargoUsa;
+            
+            Escribir "El producto es de Estados Unidos y tiene un valor de: ", valorPagar;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorPagar, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorPagar;
+              
+            FinSi
+          
+          FinSi
+          
+          si productoSeleccionado = 1 & procedencia = 3 Entonces
+            
+            recargoAleman <- valorAcetaminofen * 0.8;
+            valorPagar <- valorAcetaminofen + recargoAleman;
+            
+            Escribir "El producto es de Alemania y tiene un valor de: ", valorPagar;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorPagar, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorPagar;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 2 & procedencia = 1 Entonces
+            
+            Escribir "El producto es nacional y tiene un valor de: ", valorDiclofenalco;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorDiclofenalco, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorDiclofenalco;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 2 & procedencia = 2 Entonces
+            
+            recargoUsa <- valorDiclofenalco * 0.5;
+            valorPagar <- valorDiclofenalco + recargoUsa;
+            
+            Escribir "El producto es de Estados Unidos y tiene un valor de: ", valorPagar;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorPagar, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorPagar;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 2 & procedencia = 3 Entonces
+            
+            recargoAleman <- valorDiclofenalco * 0.8;
+            valorPagar <- valorDiclofenalco + recargoAleman;
+            
+            Escribir "El producto es de Alemania y tiene un valor de: ", valorPagar;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorPagar, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorPagar;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 3 & procedencia = 1 Entonces
+            
+            Escribir "El producto es nacional y tiene un valor de: ", valorAspirina;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorAspirina, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorAspirina;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 3 & procedencia = 2 Entonces
+            
+            recargoUsa <- valorAspirina* 0.5;
+            valorPagar <- valorAspirina + recargoUsa;
+            
+            Escribir "El producto es de Estados Unidos y tiene un valor de: ", valorPagar;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorPagar, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorPagar;
+              
+            FinSi
+            
+          FinSi
+          
+          si productoSeleccionado = 3 & procedencia = 3 Entonces
+            
+            recargoAleman <- valorAspirina * 0.8;
+            valorPagar <- valorAspirina + recargoAleman;
+            
+            Escribir "El producto es de Alemania y tiene un valor de: ", valorPagar;
+            
+            Escribir "Por favor responda falso o Verdadero, ¿Desea comprar el producto?";
+            leer comprar;
+            
+            si comprar = verdadero Entonces
+              
+              Escribir "Por favor dirigete al punto de recaudo y paga el valor de: ", valorPagar, ".";
+              Escribir "¡Muchas gracias por su compra!";
+            SiNo
+              
+              Escribir "Muchas gracias por tu consulta.";
+              Escribir "Recuenda que el valor de tu producto es de: ", valorPagar;
+              
+            FinSi
+            
+          FinSi
+          
+        2:
+          Escribir  "Por favor indique el motivo de la devolución";
+          Leer devolucion;
+          
+          Limpiar Pantalla;
+          
+          Escribir "Le pedimos disculpas por las molestias, por favor reclame el cambio del producto en taquilla. Muchas gracias";
+          
+      FinSegun
+      
+    FinProceso
+    </pre
+          >
+        </article>
+
+        <article id="tab6">
+          <h2>Punto 6</h2>
+
+          <p>
+            El taller de motos "El Maquinista" recibe motocicletas de alto
+            cilindraje para realizar las respectivas revisiones y requiere una
+            aplicación que le permita registrar los servicios generados a sus
+            clientes. Para cada motocicleta se debe tener registro del ingreso
+            al taller y las observaciones por parte del cliente. También debe
+            existir registro de salida del taller con las novedades y otra de
+            arreglos hechos por el mecánico en caso de que se requiera
+            inventariar cambios repuestos en la motocicleta al entregarla.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+      Proceso practicaCondicionalesPunto6
+	
+      Definir placa, observacionCliente, repuestos, ajustesResalizados Como Caracter;
+      definir reparar, necesidadRepuestos, soloAjustes, motoReparada Como Logico;
+      
+      Escribir "Hola, bienvenido al taller de motos El Maquinista";
+      Escribir "Por favor ingrese la placa de la motocicleta";
+      Leer  placa;
+      
+      Escribir "¿Que observaciones tiene sobre la motocicleta?";
+      Leer observacionCliente;
+      
+      Escribir "La motocicleta de placas: ", placa, " tiene los siguientes inconvenientes: ", observacionCliente;
+      Escribir "Responda verdadero o falso, ¿Desea empezar con la reparación del vehiculo?";
+      Leer reparar;
+      
+      si reparar = Verdadero Entonces
+        Escribir "Por favor hacer el respectivo diagnostico de la motocilceta";
+        Escribir  "Responde verdadero o falso, ¿Vas a necesitar algunos repuestos?";
+        Leer necesidadRepuestos;
+        
+        si necesidadRepuestos = verdadero Entonces
+          Escribir "Por favor escribe cada uno de los repuestos que necesitas para la reparaciòn";
+          Leer  repuestos;
+          
+          Escribir  "Procederemos a remplazar las piezas defectuosas por las nuevas piezas";
+          Escribir "Responda falso o verdadero, ¿El cambio de repuestos surtio efecto y la motocicleta esta lista para entregar?";
+          Leer motoReparada;
+          
+          si motoReparada = Verdadero Entonces
+            
+            Escribir "La moto de placas: ", placa, ", esta lista para ser entregada, se hicieron los siguiente cambios de piezas: ", repuestos;
+            Escribir " y esta lista para ser entregada, por favor acércate a la caja para realizar el pago de los repuestos y mano de obra.";
+            Escribir "Esperamos que su experiencia sea satisfactoria. Muchas gracias por elegirnos.";
+            
+          SiNo
+            
+            Escribir "Lamentamos informar que nuestros ajustes no fuenro efectivos, por lo tanto su motocicleta no tiene repación en nuestro taller";
+            Escribir "Pedimos disculpas al no poder ayudarte en esta ocasión";
+            
+          FinSi
+          
+          
+        SiNo
+          
+          Escribir "Responde falso o verdadero, ¿La motocilceta solo necesita ajustes?";
+          Leer soloAjustes;
+          
+          si soloAjustes = Verdadero Entonces
+            
+            Escribir "¿Que ajustes se realizaran a la moticicleta?";
+            Leer  ajustesResalizados;
+            
+            Escribir "Se estan haciendo los ajustes a la motocilceta.";
+            
+            Escribir  "Responda verdadero o falso, ¿Con los ajustes realizados, la moto esta reparada y lista para entregar?";
+            Leer motoReparada;
+            
+            si motoReparada = Verdadero Entonces
+              
+              Escribir "La moto de placas: ", placa, ", esta lista para ser entregada, se hicieron los siguiente ajustes: ", ajustesResalizados;
+              Escribir " y esta lista para ser entregada, por favor acércate a la caja para realizar el pago.";
+              
+            SiNo
+              
+              Escribir "Lamentamos informar que nuestros ajustes no fuenro efectivos, por lo tanto su motocicleta no tiene repación en nuestro taller";
+              Escribir "Pedimos disculpas al no poder ayudarte en esta ocasión";
+              
+            FinSi
+          
+          SiNo
+            
+            Escribir "Lamentamos informar que su motocicleta no tiene repación en nuestro taller";
+            Escribir "Pedimos disculpas al no poder ayudarte en esta ocasión";
+            
+          FinSi
+        
+        FinSi
+        
+      SiNo
+        
+        Escribir "Recuerda revisar la motocicleta pronto, para prestar el servicio lo antes posible, muchas gracias.";
+        
+      FinSi
+      
+    FinProceso
+    </pre
+          >
+        </article>
+
+        <article id="tab7">
+          <h2>Punto 7</h2>
+
+          <p>
+            La Secretaría de Salud Municipal requiere de una aplicación que le
+            permita calcular el IMC (Índice de masa corporal) y requiere los
+            datos peso en kilogramos y estatura en metros Para cada persona
+            encuestada adicional a los datos suministrados, debe mostrar el
+            resultado para cada uno y establecer en qué rango se encuentra (bajo
+            peso, normal, sobrepeso y obeso).
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+    Proceso practicaCondicionalesPunto7
+	
+      Definir peso, estatura, imc Como Real;
+      
+      
+      Escribir "Por favor ingrese en peso de la persona en kilogramos";
+      Leer peso;
+      
+      Escribir "Por favor ingrese la estatura de la persona el Metros";
+      Leer estatura;
+      
+      imc <- peso / estatura^2;
+      
+      
+      si imc < 18.5 Entonces
+        
+        Limpiar Pantalla;
+        Escribir "Su peso es de: ",peso, " kg, su estatura es de: ", estatura, " Mt y su IMC (Indice de masa corporal es de: ", imc, ", por lo tanto la persona se encuentra en bajo peso";
+        
+      FinSi
+      
+      si imc >= 18.5 & imc <= 24.9 Entonces
+        
+        Limpiar Pantalla;
+        Escribir "Su peso es de: ",peso, " Kg, su estatura es de: ", estatura, "Mt y su IMC (Indice de masa corporal es de: ", imc, ", por lo tanto la persona se encuentra en el peso normal";
+      
+      FinSi
+      
+      si imc > 24.9 & imc <= 29.9 Entonces
+        
+        Limpiar Pantalla;
+        Escribir "Su peso es de: ",peso, " kg, su estatura es de: ", estatura, " Mt y su IMC (Indice de masa corporal es de: ", imc, ", por lo tanto la persona se encuentra en sobrepeso";
+        
+      FinSi
+        
+      si imc > 29.9 Entonces
+        
+        Limpiar Pantalla;
+        Escribir  "Su peso es de: ",peso, " kg, su estatura es de: ", estatura, " Mt y su IMC (Indice de masa corporal es de: ", imc, ", por lo tanto la persona se encuentra obesa";
+        
+      FinSi	
+      
+    FinProceso
+    
+    </pre
+          >
+        </article>
+
+        <article id="tab8">
+          <h2>Punto 8</h2>
+
+          <p>
+            El pastelero Don Carlos es el mejor pastelero de la ciudad y
+            requiere una aplicación que le permita registrar los pedidos de los
+            clientes en cuanto a las tortas que realiza. Cada torta tiene unas
+            características propias como sabor, cantidad (porciones) y
+            decoraciones). Se requiere que la aplicación permita registrar los
+            pedidos, las tortas disponibles y las ventas que se registren
+            diariamente.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+    Proceso practicaCondicionalesPunto8
+	
+      Definir sabor,cantidadPorciones, decoracion, valorDecoracionFrutas, valorDecoracionGlaseado, valorPastel como entero;
+      Definir valorFresa, valorVainilla, valorChocolate, valor8Porciones, valor16Porciones, valor24Porciones Como Entero;
+      Definir confirmarPedido Como Logico;
+      
+      Escribir "Hola, espero se encuentre muy bien";
+      Escribir "Para la pasteleria Don carlos es un gusto atenderlo";
+      Escribir "A continuaciòn te brindamos las diferentes opciones para que puedas realizar tu pedido";
+      Escribir "Por favor elije el nùmero de la opciòn deseada para realizar su pedido";
+      Escribir "¿De que sabor deseas el pastel?";
+      Escribir "1. Fresa";
+      Escribir "2: Vainilla";
+      Escribir "3: Chocolate";
+      Leer  sabor;
+      
+      Escribir "¿De cuantas porciones desea para el pastel?";
+      Escribir "1. 8 porciones";
+      Escribir " 2. 16 porciones";
+      Escribir " 3. 24 porciones";
+      leer cantidadPorciones;
+      
+      Escribir "¿Que decoraciòn desea para el pastel";
+      Escribir "1. Sin decoraciòn";
+      Escribir "2. frutas";
+      Escribir "3. glaseado";
+      Leer decoracion;
+      
+      
+      valorFresa <- 20000;
+      valorVainilla <- 25000;
+      valorChocolate <- 30000;
+      valor8Porciones <- 20000;
+      valor16Porciones <- 35000;
+      valor24Porciones <- 45000;
+      valorDecoracionFrutas <- 15000;
+      valorDecoracionGlaseado <- 35000;
+      
+      Segun  sabor Hacer
+        1: 
+          si cantidadPorciones = 1 & decoracion = 1 Entonces
+            
+            valorPastel <- valorFresa + valor8Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel de fresa, 8 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 1 Entonces
+            
+            valorPastel <- valorFresa + valor16Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 16 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 1 Entonces
+            
+            valorPastel <- valorFresa + valor24Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 24 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 1 & decoracion = 2 Entonces
+            
+            valorPastel <- valorFresa + valor8Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 8 porciones y decoraciòn con frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 2 Entonces
+            
+            valorPastel <- valorFresa + valor16Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel de Fresa, 16 porciones y decoración de frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 2 Entonces
+            
+            valorPastel <- valorFresa + valor24Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 24 porciones y decoración de frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 1 & decoracion = 3 Entonces
+            
+            valorPastel <- valorFresa + valor8Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 8 porciones y decoraciòn de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 3 Entonces
+            
+            valorPastel <- valorFresa + valor16Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 16 porciones y decoración de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 3 Entonces
+            
+            valorPastel <- valorFresa + valor24Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Fresa, 24 porciones y decoración de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+        2:
+          si cantidadPorciones = 1 & decoracion = 1 Entonces
+            
+            valorPastel <- valorVainilla + valor8Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 8 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 1 Entonces
+            
+            valorPastel <- valorVainilla + valor16Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 16 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 1 Entonces
+            
+            valorPastel <- valorVainilla + valor24Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 24 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 1 & decoracion = 2 Entonces
+            
+            valorPastel <- valorVainilla + valor8Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 8 porciones y decoraciòn con frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 2 Entonces
+            
+            valorPastel <- valorVainilla + valor16Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 16 porciones y decoración de frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 2 Entonces
+            
+            valorPastel <- valorVainilla + valor24Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 24 porciones y decoración de frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 1 & decoracion = 3 Entonces
+            
+            valorPastel <- valorVainilla + valor8Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 8 porciones y decoraciòn de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 3 Entonces
+            
+            valorPastel <- valorVainilla + valor16Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 16 porciones y decoración de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 3 Entonces
+            
+            valorPastel <- valorVainilla + valor24Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Vainilla, 24 porciones y decoración de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+        3:
+          si cantidadPorciones = 1 & decoracion = 1 Entonces
+            
+            valorPastel <- valorChocolate + valor8Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 8 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 1 Entonces
+            
+            valorPastel <- valorChocolate + valor16Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel de Chocolate, 16 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 1 Entonces
+            
+            valorPastel <- valorChocolate + valor24Porciones;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 24 porciones y sin decoración.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 1 & decoracion = 2 Entonces
+            
+            valorPastel <- valorChocolate + valor8Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 8 porciones y decoraciòn con frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 2 Entonces
+            
+            valorPastel <- valorChocolate + valor16Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 16 porciones y decoración de frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 2 Entonces
+            
+            valorPastel <- valorChocolate + valor24Porciones + valorDecoracionFrutas;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 24 porciones y decoración de frutas.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 1 & decoracion = 3 Entonces
+            
+            valorPastel <- valorChocolate + valor8Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 8 porciones y decoraciòn de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 2 & decoracion = 3 Entonces
+            
+            valorPastel <- valorChocolate + valor16Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 16 porciones y decoración de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+          si cantidadPorciones = 3 & decoracion = 3 Entonces
+            
+            valorPastel <- valorChocolate + valor24Porciones + valorDecoracionGlaseado;
+            
+            Limpiar Pantalla;
+            Escribir "Su pastel es de Chocolate, 24 porciones y decoración de glaseado.";
+            Escribir "El valor a pagar es de: ", valorPastel;
+            
+          FinSi
+          
+      FinSegun
+      
+      Escribir "Responda falso o verdadero, ¿Desea realizar el pedido?";
+      Leer confirmarPedido;
+      
+      si confirmarPedido = Verdadero Entonces
+        
+        Escribir "Su pedido entrara en proceso de producciòn, se le informara cuando este listo";
+        
+      SiNo
+        
+        Escribir "Muchas gracias por visitarnos, esperamos servirte en otra oportunidad";
+        
+      FinSi
+      
+      
+    FinProceso
+    </pre
+          >
+        </article>
+
+        <article id="tab9">
+          <h2>Punto 9</h2>
+
+          <p>
+            El profesor de geometría está explicando a sus estudiantes las
+            fórmulas para calcular el área de diferentes figuras geométricas,
+            para ello requiere una aplicación que le facilite el ejercicio
+            solicitándole los valores al estudiante. La aplicación debe permitir
+            que el estudiante seleccione si desea calcular el área de un
+            rectángulo, triángulo o trapecio. No olvide solicitar los datos
+            necesarios para realizar cada cálculo y mostrar su respectivo
+            resultado.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+      Proceso practicaCondicionalesPunto9
+	
+	      Definir base, base2, altura, areaRectangulo, areaTriangulo, areaTrapecio Como Real;
+	      Definir figura Como Entero;
+	
+	      Escribir "Por favor ingrese el número de la figura de la desea calcular el área";
+	      Escribir "1. Rectángulo";
+	      Escribir "2. Triangulo";
+	      Escribir "3. Trapecio";
+	      Leer figura;
+	
+	      Segun figura Hacer
+		      1:
+			
+			      Escribir "Por favor ingrese la base de rectangulo";
+			      Leer base;
+			      Escribir "Por favor ingrese la altura de rectangulo";
+			      Leer altura;
+			
+			      areaRectangulo <- base * altura;
+			
+			      Limpiar Pantalla;
+			      Escribir "El area de rectangulo es igual a: ", areaRectangulo;
+			
+		      2:
+			      Escribir "Por favor ingrese la base del triangulo";
+			      Leer base;
+			      Escribir "Si en triangulo no es rectangulo, por favor trazar una linea recta desde el vertice mas alto hasta       la base del triangulo, para calcular la altura del triangulo";
+			      Escribir "Por favor ingrese la altura del triangulo";
+			      Leer altura;
+			
+			      areaTriangulo <- (base * altura)/2;
+			
+			      Limpiar Pantalla;
+			      Escribir "El àrea del tringulo es igual a: ", areaTriangulo;
+			
+		      3:
+			      Escribir "Por favor ingrese la primera base del trapecio";
+			      Leer base;
+			      Escribir "Por favor ingrese la segunda base del trapecio";
+			      Leer base2;
+			      Escribir "Para obtener la altura del trapecio, traza una linea recta desde una base a la otra";
+			      Escribir "Por favor ingrese la altura del trapecio";
+			      Leer altura;
+			
+			      areaTrapecio <- ((base + base2) * altura)/2;
+			
+			      Limpiar Pantalla;
+			      Escribir "El area del trapecio es igual a: ", areaTrapecio;
+			
+	      FinSegun
+	
+	
+      FinProceso      
+    </pre
+          >
+        </article>
+
+        <article id="tab10">
+          <h2>Punto 10</h2>
+
+          <p>
+            El banco "Su banco fiel" es un banco que inicia sus actividades
+            financieras y necesita una aplicación para llevar las cuentas de sus
+            usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos
+            titular y cantidad. Para cada cliente las cuentas permitirán
+            realizar ingresos, retiros o consultas de valor. En los ingresos no
+            se pueden insertar valores negativos y para los retiros el valor no
+            puede ser mayor al valor que tiene en la cuenta.
+          </p>
+
+          <h3>Solución:</h3>
+
+          <pre>
+    Proceso practicaCondicionalesPunto10
+	
+      Definir titular Como Caracter;
+      Definir cantidad, valorIngresar, valorRetirar, nuevaCantidad Como real;
+      Definir verCantidad Como Logico;
+      Definir operacion Como Entero;
+      
+      Escribir "Por favor ingrese el nombre del titular de la cuenta";
+      Leer  titular;
+      
+      Escribir "Por favor ingrese la cantidad de dinero con la que la cuenta inicia";
+      leer cantidad;
+      
+      si cantidad <= 0 Entonces
+        
+        Escribir " La cantidad no puede ser negativa";
+        
+      FinSi
+      
+      Escribir "Por favor seleccione el nùmero de la operaciòn que desea realizar";
+      Escribir "1. Ver saldo";
+      Escribir "2. Depositar dinero";
+      Escribir "3. Retirar dinero";
+      leer operacion;
+      
+      segun operacion Hacer
+        1: 
+          Escribir "Su saldo actual de ", titular, " es de: ", cantidad;
+          
+        2: 	
+          Escribir "Por favor ingrese el valor que desea depositar";
+          Leer valorIngresar;
+          
+          si valorIngresar > 0 Entonces
+            
+            Escribir  "Su transacciòn fue exitosa";
+            Escribir  "Su saldo actual es de: ", cantidad + valorIngresar;
+            
+          sino
+            
+            Escribir "El monto a depositar no puede ser menor a cero (0), por favor corrige y vuelve a intentarlo";
+            
+          FinSi
+          
+        3: 
+          Escribir  "Por favor ingrese el valor que desea retirar";
+          Leer  valorRetirar;
+          
+          si valorRetirar > cantidad O valorRetirar < 0 Entonces
+            
+            Escribir "El valor a retirar es mayor que el saldo disponible o es un nùmero negativo, por favor corrijalo y vuelva a intentarlo";
+            
+          sino 
+            Escribir  "El retiro se realizo exitosamente";
+            Escribir "Responda falso o verdadero, ¿Desea ver el nuevo saldo disponible?";
+            Leer  verCantidad;
+            
+            si verCantidad= Verdadero Entonces
+              
+              nuevaCantidad <- cantidad - valorRetirar;
+              
+              Escribir "La nueva cantidad de dinero en la cuenta de ", titular, "  es: ", nuevaCantidad;
+              
+            FinSi
+            
+          FinSi
+                
+      FinSegun
+      
+    FinProceso
+    </pre
+          >
+        </article>
+
+        <div class="contenedotVideo">
+          <h2>Video de Solución del pumto 4 al 10</h2>
+
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/iGjXCuxBP0Q"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

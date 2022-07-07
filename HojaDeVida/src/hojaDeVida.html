@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoja de vida</title>
+    <link rel="stylesheet" href="/index.css" />
+    <script src="/HojaDeVida/src/index.js"></script>
+  </head>
+
+  <body onload="tema()">
+
+    <div class="vistaHvYtalleres">
+
+      <div class="contenedorPrincipal bgNegro" id="contenedorPrincipal">
+        <nav class="nav">
+          <ul class="navegacion">
+            <li class="menuNav">
+              <a href="/index.html">
+                Información principal
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/experienciaLaboral.html">
+                Experiencia laboral
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/referenciasPersonal.html">
+                Referencias personales
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/referenciasFamiliares.html">
+                Referencias familiares
+              </a>
+            </li>
+
+            <li class="menuNav">
+              <a href="/HojaDeVida/src/estudiosRealizados.html">
+                Estudios realizados
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <article class="contenido">
+          <div>
+            <button
+              type="button"
+              class="botonCambioFondo bgVerde"
+              onclick="tema('bgVerde'), removerColor('verde')"
+            >
+              Tema 1
+            </button>
+
+            <button
+              type="button"
+              class="botonCambioFondo bgAmarillo"
+              onclick="tema('bgAmarillo'), removerColor('amarillo')"
+            >
+              Tema 2
+            </button>
+
+            <button
+              type="button"
+              class="botonCambioFondo bgMorado"
+              onclick="tema('bgMorado'), removerColor('morado')"
+            >
+              Tema 3
+            </button>
+
+            <button
+              type="button"
+              class="botonCambioFondo bgNegro"
+              onclick="tema('bgNegro'), removerColor('negro')"
+            >
+              Restablecer
+            </button>
+          </div>
+
+          <h1 class="textColor">Información principal</h1>
+
+          <img class="fotoHV" src="/imagenes/fotoHV.jpg" />
+
+          <div class="datosPrincipales">
+            <div class="columna border textColor">
+              <h2 class="amarilloColor centerText negroColor">
+                Información personal
+              </h2>
+              <ul class="informacionPersonal centerText">
+                <li>Nombre: Juan David Arango Tavera</li>
+                <li>Documento de identidad: 1152436952 de Medellín</li>
+                <li>Teléfono: móvil: 3116206795</li>
+                <li>E-mail: jdavid-at90@hotmail.com</li>
+                <li>Fecha de nacimiento: 22 de diciembre de 1990</li>
+                <li>Lugar de nacimiento: Sopetrán, Antioquia</li>
+                <li>Ciudad de domicilio: Medellín</li>
+                <li>Dirección: Calle 88 #52c 27</li>
+              </ul>
+            </div>
+
+            <div class="columna border">
+              <h2 class="centerText verdeColor colorBlanco">Sobre mi...</h2>
+
+              <p class="centerText textColor">
+                Soy una persona apasionada por lo que hace, siempre doy lo mejor
+                de mi en cada una de las metas que me propongo superar; ante los
+                inconvenientes soy proactivo y busco la manera de salir adelante
+                con el objetivo que se plantee para mi bien o el de mi equipo de
+                trabajo. Siempre estoy dispuesto a ayudar y presto a recibir
+                retroalimentación o sugerencias que ayuden a mejorar mi
+                desempeño y conocimiento, debido a que soy un gran apasionado
+                por adquirir conocimiento que me ayude a mejorar cada día.
+              </p>
+            </div>
+          </div>
+
+          <button class="button">
+            <a href="archivoPDF/hoja de vida.pdf" target="_blank">
+              Descargar hoja de vida en PDF
+            </a>
+          </button>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

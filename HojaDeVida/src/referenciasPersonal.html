@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <script src="/HojaDeVida/src/index.js"></script>>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/cambioContenidos.js"></script>
+    <title>Referencias personales</title>
+</head>
+
+<body onload="tema()">
+
+    <div class="vistaHvYtalleres">
+
+    <header class="bg-dark">
+        <ul class="navegacionPrincipal" >
+          <li>
+            <button onclick="cambiarContenido('/HojaDeVida/src/hojaDeVida.html')">
+              Hoja de vida
+            </button>
+          </li>
+          <li>
+            <button onclick="cambiarContenido('/TallerVariables/tallerVariables.html')">
+              Taller Variables
+            </button>
+          </li>        
+          <li>
+            <button onclick="cambiarContenido('/TallerCondicionales/tallerCondicionales.html')">
+              Taller Condicionales
+            </button>
+          </li>
+          <li>
+            <button onclick="cambiarContenido('/TallerCiclos/tallerCiclos.html')">
+              Taller Ciclos
+            </button>
+          </li>
+          <li>
+            <button onclick="cambiarContenido('/TallerArreglos/tallerArreglos.html')">
+              Taller Arreglos
+            </button>
+          </li>
+          <li>
+            <button onclick="cambiarContenido('/TallerFunciones/tallerFunciones.html')">
+              Taller Funciones
+            </button>
+          </li>
+          <li>
+            <button onclick="cambiarContenido('/TallerJava/tallerJava.html')">
+              Taller Java
+            </button>
+          </li>
+        </ul>
+      </header>
+
+    <div class="contenedorPrincipal bgNegro" id="contenedorPrincipal">
+
+
+
+        <nav>
+            <ul class="navegacion">
+
+                <li class="menuNav">
+                  <a href="/index.html">
+                    Información principal
+                  </a>
+                </li>
+        
+                <li class="menuNav">
+                  <a href="/HojaDeVida/src/experienciaLaboral.html">
+                    Experiencia laboral
+                  </a>
+                </li>
+        
+                <li class="menuNav">
+                  <a href="/HojaDeVida/src/referenciasPersonal.html">
+                    Referencias personales
+                  </a>
+                </li>
+        
+                <li class="menuNav">
+                  <a href="/HojaDeVida/src/referenciasFamiliares.html">
+                    Referencias familiares
+                  </a>
+                </li>
+        
+                <li class="menuNav">
+                  <a href="/HojaDeVida/src/estudiosRealizados.html">
+                    Estudios realizados
+                  </a>
+                </li>
+        
+              </ul>
+        </nav>
+
+        <article class="contenido textColor">
+
+            <div>
+
+                <button 
+                    type="button" 
+                    class="botonCambioFondo bgVerde" 
+                    onclick="tema('bgVerde'), removerColor('verde')"
+                >
+                    Tema 1
+                </button>
+
+                <button 
+                    type="button" 
+                    class="botonCambioFondo bgAmarillo"
+                    onclick="tema('bgAmarillo'), removerColor('amarillo')"
+                >
+                    Tema 2
+                </button>
+
+                <button 
+                    type="button" 
+                    class="botonCambioFondo bgMorado"
+                    onclick="tema('bgMorado'), removerColor('morado')"
+                >
+                    Tema 3
+                </button>
+
+                <button 
+                    type="button" 
+                    class="botonCambioFondo bgNegro" 
+                    onclick="tema('bgNegro'), removerColor('negro')"
+                >
+                    Restablecer
+                </button>
+
+            </div>
+
+            <h1 class="centerText margen">
+                Referencias personales
+            </h1>
+
+            <div class="contenido datosPrincipales acordeon">
+
+                <div class="bloque contenido activo " id="desplegarContenido1">
+
+                    <h3 class="OcultarMostrar " onclick="mostrarContenido('mostrar1')">
+                        Contenido 3
+                    </h3>
+
+                    <ul class="columna border centerText contenidoBloque">
+
+                        <li class="amarilloColor negroColor centerText ">
+                            Ricardo Rodriguez Capote
+                        </li>
+                        <li>Jefe de Programación de software.</li>
+                        <li>Sofka</li>
+                        <li>Móvil: 3002116382</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bloque contenido activo" id="desplegarContenido2">
+
+                    <h3 class="OcultarMostrar" onclick="mostrarContenido('mostrar2')">
+                        Contenido 2
+                    </h3>
+
+
+                    <ul class="columna border centerText contenidoBloque">
+
+                        <li class="amarilloColor negroColor centerText ">
+                            Augusto Cesar Cañola 
+                        </li>
+                        <li>Jefe de Programación de software.</li>
+                        <li>Euno</li>
+                        <li>Móvil: 3003764823</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bloque contenido activo" id="desplegarContenido3">
+
+                    <h3 class="OcultarMostrar " onclick="mostrarContenido('mostrar3')">
+                        Contenido 1
+                    </h3>
+
+                    <ul class="columna border centerText contenidoBloque">
+
+                        <li class="amarilloColor negroColor centerText ">
+                            Alvaro Toro Martínez
+                        </li>
+                        <li>Programador de software</li>
+                        <li>Like metric S.A.S</li>
+                        <li>Móvil: 3503611262</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <img class="imagenContenido" src="/imagenes/referencias2.png">
+
+        </article>
+    </div>
+</div>
+</body>
+
+</html>
